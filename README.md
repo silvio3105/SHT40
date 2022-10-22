@@ -6,8 +6,6 @@ Driver does not depend on framework (eg., Arduino or nRF5 SDK). External handler
 
 It is written in C++.
 
----
-
 # License
 
 Copyright (c) 2022, silvio3105
