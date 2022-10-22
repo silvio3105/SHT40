@@ -44,7 +44,7 @@ This License shall be included in all functional textual files.
 #define SHT40_NAK				(0x15)
 
 /**
- * @brief Return value representing negativ OK status.
+ * @brief Return value representing negative OK status.
  * 
  */
 #define SHT40_NOK				(0x00)
@@ -54,6 +54,18 @@ This License shall be included in all functional textual files.
  * 
  */
 #define SHT40_OK				(0x01)
+
+/**
+ * @brief Return value representing missing read I2C handler.
+ * 
+ */
+#define SHT40_I2CH_R			(0x02)
+
+/**
+ * @brief Return value representing missing write I2C handler.
+ * 
+ */
+#define SHT40_I2CH_W			(0x03)
 
 /**
  * @brief Macro definition for default SHT40 I2C address.
@@ -205,7 +217,8 @@ class SHT40 {
 	 * @brief Measures temerature and RH.
 	 * 
 	 * @param type Type of measurement. 
-	 * @return uint8_t Returns @SHT40_NOK if NAK/NACK is received (SHT40 is busy)
+	 * @return SHT40_NOK if NAK/NACK is received, SHT40 is busy.
+	 * @return SHT40_OK if measurement was OK. 
 	 */
 	uint8_t measure(SHT40_meas_t type);
 
@@ -213,7 +226,8 @@ class SHT40 {
 	 * @brief Calculates temperature from last measure call.
 	 * 
 	 * @param &out Output variable for temperature in °C.
-	 * @return Returns @SHT40_NOK if measurement data does not exist.
+	 * @return SHT40_NOK if measurement data does not exist.
+	 * @return SHT40_OK if temperature is calculated.
 	 */
 	uint8_t temperature(uint32_t& out);
 
@@ -221,22 +235,35 @@ class SHT40 {
 	 * @brief Calculates RH from last measure call.
 	 * 
 	 * @param &out Output variable for relative humidity in %.
-	 * @return Returns @SHT40_NOK if measurement data does not exist.
+	 * @return SHT40_NOK if measurement data does not exist.
+	 * @return SHT40_OK	if relative humidity is calculated.
 	 */
 	uint8_t rh(uint32_t& out);
 
 	/**
 	 * @brief Reads unique serial number.
 	 * 
-	 * @return uint32_t Serial Number from the chip.
+	 * @return Chip's unique serial number.
 	 */
 	uint32_t whoAmI(void);	
 
 	/**
 	 * @brief Function to reset the chip.
 	 * 
+	 * @return No return value.
 	 */
 	void reset(void) const;
+
+	/**
+	 * @brief Validates provided data to the object.
+	 * 
+	 * @return SHT40_I2CH_R if I2C read handler is null.
+	 * @return SHT40_I2CH_W if I2C write handler is null.
+	 * @return SHT40_NOK if SN is 0x00000000 or 0xFFFFFFFF.
+	 * @return SHT40_OK if everything is OK.
+	 */
+	uint8_t init(void);
+
 
 
 	// Private stuff

@@ -87,7 +87,7 @@ uint8_t SHT40::rh(uint32_t& out)
 	out =  -6 + (125 * (uint32_t)data.mData.rh / 65535);
 	if (out > 100) out = 100;
 	else if (out < 0) out = 0;
-	
+
 	data.mData.rh = 0;
 	return SHT40_OK;
 }
@@ -108,6 +108,17 @@ void SHT40::reset() const
 {
 	uint8_t cmd = SHT40_RST;
 	I2CWrite(address, (uint8_t*)&cmd, 1); 
+}
+
+uint8_t SHT40::init()
+{
+	if (!I2CRead) return SHT40_I2CH_R;
+	if (!I2CWrite) return SHT40_I2CH_W;
+
+	uint32_t tmp = whoAmI();
+	if (!tmp || tmp == 0xFFFFFFFF) return SHT40_NOK;
+
+	return SHT40_OK;
 }
 
 // END WITH NEW LINE
