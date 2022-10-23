@@ -104,13 +104,13 @@ uint32_t SHT40::whoAmI(void)
 	return (uint32_t)((data.snData.sn1 << 16) | data.snData.sn2);	
 }
 
-void SHT40::reset() const
+void SHT40::reset(void) const
 {
 	uint8_t cmd = SHT40_RST;
 	I2CWrite(address, (uint8_t*)&cmd, 1); 
 }
 
-uint8_t SHT40::init()
+uint8_t SHT40::init(void)
 {
 	if (!I2CRead) return SHT40_I2CH_R;
 	if (!I2CWrite) return SHT40_I2CH_W;
@@ -119,6 +119,11 @@ uint8_t SHT40::init()
 	if (!tmp || tmp == 0xFFFFFFFF) return SHT40_NOK;
 
 	return SHT40_OK;
+}
+
+inline void SHT40::clear(void)
+{
+	memset(&data.mData, 0, sizeof(data.mData));
 }
 
 // END WITH NEW LINE

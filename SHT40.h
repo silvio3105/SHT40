@@ -264,6 +264,13 @@ class SHT40 {
 	 */
 	uint8_t init(void);
 
+	/**
+	 * @brief Clear measured data.
+	 * 
+	 * @return No return value.
+	 */
+	inline void clear(void);
+
 
 
 	// Private stuff
