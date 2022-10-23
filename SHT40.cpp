@@ -78,7 +78,8 @@ uint8_t SHT40::temperature(uint32_t& out)
 {
 	if (!data.mData.temp) return SHT40_NOK;
 
-	out = -45 + (175 * (uint32_t)data.mData.temp / 65535);
+	if (getUnit() == SHT40_UNIT_C) out = -45 + (175 * ((uint32_t)data.mData.temp / 65535));
+		else out = -49 + (315 * ((uint32_t)data.mData.temp / 65535));
 	data.mData.temp = 0;
 	return SHT40_OK;
 }
@@ -87,7 +88,7 @@ uint8_t SHT40::rh(uint32_t& out)
 {
 	if (!data.mData.rh) return SHT40_NOK;
 
-	out =  -6 + (125 * (uint32_t)data.mData.rh / 65535);
+	out =  -6 + (125 * ((uint32_t)data.mData.rh / 65535));
 	if (out > 100) out = 100;
 	else if (out < 0) out = 0;
 
