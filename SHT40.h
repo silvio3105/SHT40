@@ -158,6 +158,15 @@ typedef enum: uint8_t {
 	TRH_H_H002W01S = SHT40_TRH_H_H002W01S
 } SHT40_meas_t;
 
+/**
+ * @brief Enum for temperature unit
+ * 
+ */
+typedef enum: uint8_t {
+	SHT40_UNIT_C,
+	SHT40_UNIT_F
+} SHT40_unit_t;
+
 
 // ----- TYPEDEFS
 /**
@@ -271,6 +280,24 @@ class SHT40 {
 	 */
 	inline void clear(void);
 
+	/**
+	 * @brief Sets temperature unit.
+	 * 
+	 * @param u Desired temperature unit.
+	 * @return No return value.
+	 * 
+	 * @see SHT40_unit_t
+	 */
+	inline void setUnit(SHT40_unit_t u);
+
+	/**
+	 * @brief Get temperature unit.
+	 * 
+	 * @return Selected temperature unit.
+	 * @see SHT40_unit_t
+	 */
+	inline SHT40_unit_t getUnit(void) const;
+
 
 
 	// Private stuff
@@ -327,6 +354,12 @@ class SHT40 {
 	 * 
 	 */
 	extI2C I2CWrite = nullptr;
+
+	/**
+	 * @brief Temperature unit variable.
+	 * 
+	 */
+	SHT40_unit_t unit = SHT40_UNIT_C;
 
 };
 

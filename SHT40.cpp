@@ -39,8 +39,9 @@ SHT40::SHT40(uint8_t addr, extI2C i2cr, extI2C i2cw)
 	address = addr;
 	I2CRead = i2cr;
 	I2CWrite = i2cw;
-	
-	memset(&data.mData, 0, sizeof(data.mData));
+
+	setUnit(SHT40_UNIT_C);
+	clear();
 }
 
 SHT40::SHT40(extI2C i2cr, extI2C i2cw)
@@ -49,7 +50,8 @@ SHT40::SHT40(extI2C i2cr, extI2C i2cw)
 	I2CRead = i2cr;
 	I2CWrite = i2cw;
 
-	memset(&data.mData, 0, sizeof(data.mData));
+	setUnit(SHT40_UNIT_C);
+	clear();
 }
 
 SHT40::~SHT40(void)
@@ -58,7 +60,8 @@ SHT40::~SHT40(void)
 	I2CRead = nullptr;
 	I2CWrite = nullptr;
 
-	memset(&data.mData, 0, sizeof(data.mData));   
+	setUnit(SHT40_UNIT_C);
+	clear(); 
 }
 
 
@@ -124,6 +127,16 @@ uint8_t SHT40::init(void)
 inline void SHT40::clear(void)
 {
 	memset(&data.mData, 0, sizeof(data.mData));
+}
+
+inline void SHT40::setUnit(SHT40_unit_t u)
+{
+	unit = u;
+}
+
+inline SHT40_unit_t SHT40::getUnit(void) const
+{
+	return unit;
 }
 
 // END WITH NEW LINE
