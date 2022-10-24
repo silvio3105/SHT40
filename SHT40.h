@@ -1,6 +1,6 @@
 /**
  * @file SHT40.h
- * @author silvio3105
+ * @author silvio3105 (www.github.com/silvio3105)
  * @brief Header file for SHT40 driver.
  * @version v0.1r1
  * @date 2022-10-22
@@ -34,10 +34,14 @@ This License shall be included in all functional textual files.
 // ----- INCLUDE FILES
 #include            <stdint.h>
 
+/** \addtogroup SHT40
+ * @{
+*/
 
 // ----- DEFINES
 /**
  * @brief NAK symbol.
+ * 
  * @warning User should not alter this value! 
  * 
  */
@@ -68,7 +72,7 @@ This License shall be included in all functional textual files.
 #define SHT40_I2CH_W			(0x03)
 
 /**
- * @brief Macro definition for default SHT40 I2C address.
+ * @brief Default SHT40 I2C address.
  * 
  */
 #define SHT40_I2C_DEF_ADDR      (0x44) // For SHT40-AD
@@ -143,7 +147,7 @@ This License shall be included in all functional textual files.
 
 // ----- ENUMATORS
 /**
- * @brief Enum for measurement types
+ * @brief Measurement types.
  * 
  */
 typedef enum: uint8_t {
@@ -159,7 +163,7 @@ typedef enum: uint8_t {
 } SHT40_meas_t;
 
 /**
- * @brief Enum for temperature unit
+ * @brief Temperature units.
  * 
  */
 typedef enum: uint8_t {
@@ -173,8 +177,9 @@ typedef enum: uint8_t {
  * @brief Typedef for external I2C function.
  * 
  * @param addr An address of I2C slave device.
- * @param *data Pointer to data array
- * @param len Lenth of array pointed with *data
+ * @param *data Pointer to data array.
+ * @param len Lenth of array pointed with *data.
+ * @return No return value.
  * 
  */
 typedef void (*extI2C)(uint8_t addr, uint8_t* data, uint8_t len); 
@@ -322,7 +327,7 @@ class SHT40 {
 			uint16_t sn1;
 			uint8_t crc1;
 			uint16_t sn2;
-			uint8_t crc2;		
+			uint8_t crc2;
 		} snData;
 
 		/**
@@ -363,6 +368,9 @@ class SHT40 {
 
 };
 
+/**
+ * @}
+*/
 
 #endif // _SHT40_H_
 

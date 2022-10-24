@@ -1,7 +1,7 @@
 /**
  * @file SHT40.cpp
- * @author silvio3105
- * @brief SHT40 C++ file
+ * @author silvio3105 (www.github.com/silvio3105)
+ * @brief SHT40 C++ file.
  * @version v0.1r1
  * @date 2022-10-22
  * 
