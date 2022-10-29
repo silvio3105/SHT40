@@ -1,0 +1,5 @@
+<map id="SHT40::setUnit" name="SHT40::setUnit">
+<area shape="rect" id="node1" title="Sets temperature unit." alt="" coords="172,31,283,56"/>
+<area shape="rect" id="node2" href="$class_s_h_t40.html#ac0b628518b7080ed4960255091814956" title="Object constructor." alt="" coords="9,5,120,31"/>
+<area shape="rect" id="node3" href="$class_s_h_t40.html#ae74f4b03548e0906ef04903b584da1d0" title="Object deconstructor." alt="" coords="5,55,124,80"/>
+</map>

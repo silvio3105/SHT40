@@ -2,13 +2,14 @@
 # SHT40 I2C Driver
 
 This is I2C driver for SHT40 relative humidity & temperature sensor.
-Driver does not depend on framework (eg., Arduino or nRF5 SDK). External handlers for I2C read and write operations have to be provided during object construction.
+Driver does not depend on framework (eg., Arduino or nRF5 SDK). External handlers for I2C read and write operations have to be provided during object construction. It is written in C++.
 
-It is written in C++.
+Driver documentation is available at `.docs/html/index.html`
+Example applications are available at `examples` folder. All examples are made with STM HAL framework.
 
 # License
 
-Copyright (c) 2022, silvio3105
+Copyright (c) 2022, silvio3105 (www.github.com/silvio3105)
 
 Access and use of this Project and its contents are granted free of charge to any Person.
 The Person is allowed to copy, modify and use The Project and its contents only for non-commercial use.

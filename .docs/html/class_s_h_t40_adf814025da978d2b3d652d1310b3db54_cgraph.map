@@ -1,0 +1,4 @@
+<map id="SHT40::temperature" name="SHT40::temperature">
+<area shape="rect" id="node1" title="Calculates temperature from last measure call." alt="" coords="5,5,144,31"/>
+<area shape="rect" id="node2" href="$class_s_h_t40.html#aabc3e928e94a31e8c8cb2a9757ae9452" title="Get temperature unit." alt="" coords="192,5,303,31"/>
+</map>
