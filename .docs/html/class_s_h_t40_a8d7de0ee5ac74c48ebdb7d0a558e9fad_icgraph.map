@@ -1,4 +1,4 @@
 <map id="SHT40::whoAmI" name="SHT40::whoAmI">
 <area shape="rect" id="node1" title="Reads unique serial number." alt="" coords="140,5,257,31"/>
-<area shape="rect" id="node2" href="$class_s_h_t40.html#ad26967f001b5c69017688ad3e5c4f1a1" title="Validates provided data to the object." alt="" coords="5,5,92,31"/>
+<area shape="rect" id="node2" href="$class_s_h_t40.html#a7c44b45430aa66546d853ca517b1eb8f" title="Initialize SHT40 object." alt="" coords="5,5,92,31"/>
 </map>

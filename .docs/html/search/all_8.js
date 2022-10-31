@@ -1,4 +1,29 @@
 var searchData=
 [
-  ['temperature_0',['temperature',['../class_s_h_t40.html#adf814025da978d2b3d652d1310b3db54',1,'SHT40']]]
+  ['setunit_0',['setUnit',['../class_s_h_t40.html#a845a86373be69ec11e57bb4af74ff914',1,'SHT40']]],
+  ['sht40_1',['SHT40',['../class_s_h_t40.html',1,'SHT40'],['../class_s_h_t40.html#a916fcd27d0025d4e101e57d31c477020',1,'SHT40::SHT40()'],['../group___s_h_t40.html',1,'(Global Namespace)']]],
+  ['sht40_20i2c_20driver_2',['SHT40 I2C Driver',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['sht40_2ecpp_3',['SHT40.cpp',['../_s_h_t40_8cpp.html',1,'']]],
+  ['sht40_2eh_4',['SHT40.h',['../_s_h_t40_8h.html',1,'']]],
+  ['sht40_5fi2c_5fdef_5faddr_5',['SHT40_I2C_DEF_ADDR',['../group___s_h_t40.html#gac45ac567f29db98fb46b00a8bfc6b809',1,'SHT40.h']]],
+  ['sht40_5fi2ch_5fr_6',['SHT40_I2CH_R',['../group___s_h_t40.html#gaf5431f60376dd99c14d916c29db6edb1',1,'SHT40.h']]],
+  ['sht40_5fi2ch_5fw_7',['SHT40_I2CH_W',['../group___s_h_t40.html#ga88bc989eef427f900354602e91da463d',1,'SHT40.h']]],
+  ['sht40_5fm_5ftrh_5fhp_8',['SHT40_M_TRH_HP',['../group___s_h_t40.html#gaee97d7c670a0cfaa93d4cb620eb850e5',1,'SHT40.h']]],
+  ['sht40_5fm_5ftrh_5flp_9',['SHT40_M_TRH_LP',['../group___s_h_t40.html#gad7275b0bebbd2c7d88e8e7b64f1838e5',1,'SHT40.h']]],
+  ['sht40_5fm_5ftrh_5fmp_10',['SHT40_M_TRH_MP',['../group___s_h_t40.html#ga785d204f76e784cfccfb3e75e35c4c6c',1,'SHT40.h']]],
+  ['sht40_5fmeas_5ft_11',['SHT40_meas_t',['../group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2',1,'SHT40.h']]],
+  ['sht40_5fnak_12',['SHT40_NAK',['../group___s_h_t40.html#ga455685d8332748805aa4b2276e9e0e6c',1,'SHT40.h']]],
+  ['sht40_5fnok_13',['SHT40_NOK',['../group___s_h_t40.html#ga6a12dcc59118c49840e8d34934c5b27b',1,'SHT40.h']]],
+  ['sht40_5fok_14',['SHT40_OK',['../group___s_h_t40.html#gab911ec92009dcb97318f6981a420bfb9',1,'SHT40.h']]],
+  ['sht40_5frst_15',['SHT40_RST',['../group___s_h_t40.html#ga4f7183d9a9d0ae193e068118ea28a6f0',1,'SHT40.h']]],
+  ['sht40_5fsn_16',['SHT40_SN',['../group___s_h_t40.html#ga81dcaa262af4779ec911727efcaa607a',1,'SHT40.h']]],
+  ['sht40_5ftrh_5fh_5fh002w01s_17',['SHT40_TRH_H_H002W01S',['../group___s_h_t40.html#ga4616325c85d60a0ac487009c3a750eec',1,'SHT40.h']]],
+  ['sht40_5ftrh_5fh_5fh002w1s_18',['SHT40_TRH_H_H002W1S',['../group___s_h_t40.html#ga6fc46356c6aae5fcf6058adbf8ad93e0',1,'SHT40.h']]],
+  ['sht40_5ftrh_5fh_5fh011w01s_19',['SHT40_TRH_H_H011W01S',['../group___s_h_t40.html#gab371f109477ec494d253a35bb6bbb824',1,'SHT40.h']]],
+  ['sht40_5ftrh_5fh_5fh011w1s_20',['SHT40_TRH_H_H011W1S',['../group___s_h_t40.html#gad67c440b07df8820bea5bd2bb56ab3e1',1,'SHT40.h']]],
+  ['sht40_5ftrh_5fh_5fh02w01s_21',['SHT40_TRH_H_H02W01S',['../group___s_h_t40.html#ga43c05a8313dfa7896fd1701ae8cec70e',1,'SHT40.h']]],
+  ['sht40_5ftrh_5fh_5fh02w1s_22',['SHT40_TRH_H_H02W1S',['../group___s_h_t40.html#gaf1d781a1ba789d150c28a340fadd28f5',1,'SHT40.h']]],
+  ['sht40_5funit_5fc_23',['SHT40_UNIT_C',['../group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99ca42002bfdc377e7ba21bc738149b1834b',1,'SHT40.h']]],
+  ['sht40_5funit_5ft_24',['SHT40_unit_t',['../group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c',1,'SHT40.h']]],
+  ['sn1_25',['sn1',['../class_s_h_t40.html#a5e4aa4c4f6b5bf922c2a1bd4cb452716',1,'SHT40']]]
 ];

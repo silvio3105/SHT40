@@ -34,123 +34,45 @@ This License shall be included in all functional textual files.
 // ----- INCLUDE FILES
 #include            <stdint.h>
 
+
 /** \addtogroup SHT40
  * @{
 */
 
 // ----- DEFINES
-/**
- * @brief NAK symbol.
- * 
- * @warning User should not alter this value! 
- * 
- */
-#define SHT40_NAK				(0x15)
+// RETURN CODES
+#define SHT40_NAK				(0x15) /**< @brief NAK symbol. */
+#define SHT40_NOK				(0x00) /**< @brief Return value representing negative OK status. */
+#define SHT40_OK				(0x01) /**< @brief Return value representing OK status. */
+#define SHT40_I2CH_R			(0x02) /**< @brief Return value representing missing read I2C handler. */
+#define SHT40_I2CH_W			(0x03) /**< @brief Return value representing missing write I2C handler. */
 
-/**
- * @brief Return value representing negative OK status.
- * 
- */
-#define SHT40_NOK				(0x00)
-
-/**
- * @brief Return value representing OK status.
- * 
- */
-#define SHT40_OK				(0x01)
-
-/**
- * @brief Return value representing missing read I2C handler.
- * 
- */
-#define SHT40_I2CH_R			(0x02)
-
-/**
- * @brief Return value representing missing write I2C handler.
- * 
- */
-#define SHT40_I2CH_W			(0x03)
-
+// CONFIG
 /**
  * @brief Default SHT40 I2C address.
  * 
+ * @note 0x44 for SHT40-A
+ * @note 0x45 for SHT40-B
  */
 #define SHT40_I2C_DEF_ADDR      (0x44) // For SHT40-AD
 //#define SHT40_I2C_DEF_ADDR      (0x45) // For SHT40-B
 
-/**
- * @brief High precision temperature & RH measurement without heater.
- * 
- */
-#define SHT40_M_TRH_HP			(0xFD)
-
-/**
- * @brief Medium precision temperature & RH measurement without heater.
- * 
- */
-#define SHT40_M_TRH_MP			(0xF6)  
-
-/**
- * @brief Low precision temperature & RH measurement without heater.
- * 
- */
-#define SHT40_M_TRH_LP			(0xE0)  
-
-/**
- * @brief Serial number command.
- * 
- */
-#define SHT40_SN				(0x89)  
-
-/**
- * @brief Soft reset command.
- * 
- */
-#define SHT40_RST				(0x94)  
-
-/**
- * @brief High precision temperature & RH measurement with 0.2W heater 1s.
- * 
- */
-#define SHT40_TRH_H_H02W1S		(0x39)  
-
-/**
- * @brief High precision temperature & RH measurement with 0.2W heater 0.1s.
- * 
- */
-#define SHT40_TRH_H_H02W01S		(0x32)  
-
-/**
- * @brief High precision temperature & RH measurement with 0.1W heater 1s.
- * 
- */
-#define SHT40_TRH_H_H011W1S		(0x2F)  
-
-/**
- * @brief High precision temperature & RH measurement with 0.1W heater 0.1s.
- * 
- */
-#define SHT40_TRH_H_H011W01S	(0x24)  
-
-/**
- * @brief High precision temperature & RH measurement with 0.02W heater 1s.
- * 
- */
-#define SHT40_TRH_H_H002W1S		(0x1E)  
-
-/**
- * @brief High precision temperature & RH measurement with 0.02W heater 0.1s.
- * 
- */
-#define SHT40_TRH_H_H002W01S	(0x15)  
+// SHT40 COMMANDS
+#define SHT40_M_TRH_HP			(0xFD) /**< @brief High precision temperature & RH measurement without heater. */
+#define SHT40_M_TRH_MP			(0xF6) /**< @brief Medium precision temperature & RH measurement without heater. */
+#define SHT40_M_TRH_LP			(0xE0) /**< @brief Low precision temperature & RH measurement without heater. */
+#define SHT40_SN				(0x89) /**< @brief Serial number command. */
+#define SHT40_RST				(0x94) /**< @brief Soft reset command. */
+#define SHT40_TRH_H_H02W1S		(0x39) /**< @brief High precision temperature & RH measurement with 0.2W heater 1s. */
+#define SHT40_TRH_H_H02W01S		(0x32) /**< @brief High precision temperature & RH measurement with 0.2W heater 0.1s. */
+#define SHT40_TRH_H_H011W1S		(0x2F) /**< @brief High precision temperature & RH measurement with 0.1W heater 1s. */
+#define SHT40_TRH_H_H011W01S	(0x24) /**< @brief High precision temperature & RH measurement with 0.1W heater 0.1s. */
+#define SHT40_TRH_H_H002W1S		(0x1E) /**< @brief High precision temperature & RH measurement with 0.02W heater 1s. */  
+#define SHT40_TRH_H_H002W01S	(0x15) /**< @brief High precision temperature & RH measurement with 0.02W heater 0.1s. */ 
 
 
 // ----- ENUMATORS
-/**
- * @brief Measurement types.
- * 
- */
-typedef enum: uint8_t {
+typedef enum SHT40_meas_t: uint8_t { /**< @brief Measurement types. */
 	TRH_H = SHT40_M_TRH_HP,
 	TRH_M = SHT40_M_TRH_MP,
 	TRH_L = SHT40_M_TRH_LP,
@@ -160,16 +82,12 @@ typedef enum: uint8_t {
 	TRH_H_H011W01S = SHT40_TRH_H_H011W01S,
 	TRH_H_H002W1S = SHT40_TRH_H_H002W1S,
 	TRH_H_H002W01S = SHT40_TRH_H_H002W01S
-} SHT40_meas_t;
+};
 
-/**
- * @brief Temperature units.
- * 
- */
-typedef enum: uint8_t {
+typedef enum SHT40_unit_t: uint8_t { /**< @brief Temperature units. */
 	SHT40_UNIT_C,
 	SHT40_UNIT_F
-} SHT40_unit_t;
+};
 
 
 // ----- TYPEDEFS
@@ -191,9 +109,9 @@ typedef void (*extI2C)(uint8_t addr, uint8_t* data, uint8_t len);
  * 
  */
 class SHT40 {
-	// Public stuff
+	// PUBLIC CLASS
 	public:
-
+	// CONSTUCTORS AND DECONSTRUCTORS DECLARATIONS
 	/**
 	 * @brief Object constructor.
 	 * 
@@ -205,19 +123,7 @@ class SHT40 {
 	 * @see SHT40(extI2C, extI2C)
 	 * 
 	 */
-	SHT40(uint8_t addr, extI2C i2cr, extI2C i2cw);
-
-	/**
-	 * @brief Overloaded object constructor.
-	 * 
-	 * @param i2cr Pointer to external I2C read function.
-	 * @param i2cw Pointer to external I2C write function. 
-	 * @return No return value.
-	 * 
-	 * @see SHT40(uint8_t, extI2C, extI2C)
-	 * 
-	 */
-	SHT40(extI2C i2cr, extI2C i2cw);
+	SHT40(uint8_t addr = SHT40_I2C_DEF_ADDR, extI2C i2cr, extI2C i2cw);
 
 	/**
 	 * @brief Object deconstructor.
@@ -227,6 +133,7 @@ class SHT40 {
 	 */
 	~SHT40(void);
 
+	// METHODS DECLARATIONS
 	/**
 	 * @brief Measures temerature and RH.
 	 * 
@@ -252,7 +159,7 @@ class SHT40 {
 	 * @return SHT40_NOK if measurement data does not exist.
 	 * @return SHT40_OK	if relative humidity is calculated.
 	 */
-	uint8_t rh(uint32_t& out);
+	uint8_t rh(int16_t& out);
 
 	/**
 	 * @brief Reads unique serial number.
@@ -269,14 +176,17 @@ class SHT40 {
 	void reset(void) const;
 
 	/**
-	 * @brief Validates provided data to the object.
+	 * @brief Initialize SHT40 object.
 	 * 
+	 * Check provided external I2C operations handlers and sets temperature unit
+	 * 
+	 * @param u Desired temperature unit.
 	 * @return SHT40_I2CH_R if I2C read handler is null.
 	 * @return SHT40_I2CH_W if I2C write handler is null.
 	 * @return SHT40_NOK if SN is 0x00000000 or 0xFFFFFFFF.
 	 * @return SHT40_OK if everything is OK.
 	 */
-	uint8_t init(void);
+	uint8_t init(SHT40_unit_t u);
 
 	/**
 	 * @brief Clear measured data.
@@ -304,37 +214,20 @@ class SHT40 {
 	inline SHT40_unit_t getUnit(void) const;
 
 
-
-	// Private stuff
+	// PRIVATE STUFF
 	private:
+	// VARIABLES
+	union { /**< @brief Union for SHT40 data. */
+		uint8_t header; /**< @brief Header for NACK/NAK is sensor is busy. */
 
-	/**
-	 * @brief Union of SHT40 data.
-	 * 
-	 */
-	union {
-		/**
-		 * @brief Header for NACK/NAK is sensor is busy.
-		 * 
-		 */
-		uint8_t header;
-
-		/**
-		 * @brief Struct for SHT40 serial number data.
-		 * 
-		 */
-		struct {
+		struct { /**< @brief Struct for SHT40 serial number data. */
 			uint16_t sn1;
 			uint8_t crc1;
 			uint16_t sn2;
 			uint8_t crc2;
 		} snData;
 
-		/**
-		 * @brief Struct for SHT40 measurement data.
-		 * 
-		 */
-		struct {
+		struct { /**< @brief Struct for SHT40 measurement data. */
 			uint16_t temp;
 			uint8_t crc1;
 			uint16_t rh;
@@ -342,30 +235,10 @@ class SHT40 {
 		} mData;
 	} data;
 
-	/**
-	 * @brief I2C slave device address
-	 * 
-	 */
-	uint8_t address = SHT40_I2C_DEF_ADDR;
-
-	/**
-	 * @brief Pointer to external I2C read function.
-	 * 
-	 */
-	extI2C I2CRead = nullptr;
-
-	/**
-	 * @brief Pointer to external I2C write function.
-	 * 
-	 */
-	extI2C I2CWrite = nullptr;
-
-	/**
-	 * @brief Temperature unit variable.
-	 * 
-	 */
-	SHT40_unit_t unit = SHT40_UNIT_C;
-
+	uint8_t address = SHT40_I2C_DEF_ADDR; /**< @brief I2C slave device address. */
+	extI2C I2CRead = nullptr; /**< @brief Pointer to external I2C read function. */
+	extI2C I2CWrite = nullptr; /**< @brief Pointer to external I2C write function. */
+	SHT40_unit_t unit = SHT40_UNIT_C; /**< @brief Temperature unit variable. */
 };
 
 /**

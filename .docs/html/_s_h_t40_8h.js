@@ -18,5 +18,19 @@ var _s_h_t40_8h =
     [ "SHT40_TRH_H_H02W01S", "group___s_h_t40.html#ga43c05a8313dfa7896fd1701ae8cec70e", null ],
     [ "SHT40_TRH_H_H02W1S", "group___s_h_t40.html#gaf1d781a1ba789d150c28a340fadd28f5", null ],
     [ "extI2C", "group___s_h_t40.html#ga4c20ba2e81b46c1ad170bac078c04246", null ],
-    [ "enum", "group___s_h_t40.html#ga33e07dd7db25f3cc7f69b2828a735eb3", null ]
+    [ "SHT40_meas_t", "group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2", [
+      [ "TRH_H", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2afe11220754c90b49efe332b787297258", null ],
+      [ "TRH_M", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2a655ecca862cc97b12b5fcecffe437b58", null ],
+      [ "TRH_L", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2a102cfc38940e8fd21b9c330a8a4761b7", null ],
+      [ "TRH_H_H02W1S", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2aca3d0d8a66f1257fc914c01a663b83c7", null ],
+      [ "TRH_H_H02W01S", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2aded0fe95a1bd4714518d193637474a1f", null ],
+      [ "TRH_H_H011W1S", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2ad046bd8fd81b79084e612787666389ed", null ],
+      [ "TRH_H_H011W01S", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2a72c4163920aa8869f4388aa11e63a3f3", null ],
+      [ "TRH_H_H002W1S", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2aa0216949bc7e701ba60f7760117d5776", null ],
+      [ "TRH_H_H002W01S", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2a34bcb599f3541c9a40b57c2897564fd9", null ]
+    ] ],
+    [ "SHT40_unit_t", "group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c", [
+      [ "SHT40_UNIT_C", "group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99ca42002bfdc377e7ba21bc738149b1834b", null ],
+      [ "SHT40_UNIT_F", "group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99cac24ab6df15b1fed58a9a691438e95e6e", null ]
+    ] ]
 ];

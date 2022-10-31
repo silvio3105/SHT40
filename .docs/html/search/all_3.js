@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['header_0',['header',['../class_s_h_t40.html#a40a8e2b514a16b94fcf2f040bb67da6a',1,'SHT40']]]
+  ['getunit_0',['getUnit',['../class_s_h_t40.html#aabc3e928e94a31e8c8cb2a9757ae9452',1,'SHT40']]]
 ];
