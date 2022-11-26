@@ -1,0 +1,5 @@
+<map id="SHT40::init" name="SHT40::init">
+<area shape="rect" id="node1" title="Initialize SHT40 object." alt="" coords="5,31,92,56"/>
+<area shape="rect" id="node2" href="$class_s_h_t40.html#a845a86373be69ec11e57bb4af74ff914" title="Sets temperature unit." alt="" coords="143,5,254,31"/>
+<area shape="rect" id="node3" href="$class_s_h_t40.html#a8d7de0ee5ac74c48ebdb7d0a558e9fad" title="Reads unique serial number." alt="" coords="140,55,257,80"/>
+</map>
