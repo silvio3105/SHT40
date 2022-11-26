@@ -37,6 +37,7 @@ This License shall be included in all functional textual files.
 
 /** \addtogroup SHT40
  * @{
+ * Driver for SHT40 sensor.
 */
 
 // ----- DEFINES
@@ -72,7 +73,11 @@ This License shall be included in all functional textual files.
 
 
 // ----- ENUMATORS
-typedef enum SHT40_meas_t: uint8_t { /**< @brief Measurement types. */
+/**
+ * @brief Measurement types.
+ * 
+ */
+typedef enum SHT40_meas_t: uint8_t {
 	TRH_H = SHT40_M_TRH_HP,
 	TRH_M = SHT40_M_TRH_MP,
 	TRH_L = SHT40_M_TRH_LP,
@@ -84,7 +89,11 @@ typedef enum SHT40_meas_t: uint8_t { /**< @brief Measurement types. */
 	TRH_H_H002W01S = SHT40_TRH_H_H002W01S
 };
 
-typedef enum SHT40_unit_t: uint8_t { /**< @brief Temperature units. */
+/**
+ * @brief Temperature units.
+ * 
+ */
+typedef enum SHT40_unit_t: uint8_t {
 	SHT40_UNIT_C,
 	SHT40_UNIT_F
 };
@@ -123,7 +132,7 @@ class SHT40 {
 	 * @see SHT40(extI2C, extI2C)
 	 * 
 	 */
-	SHT40(uint8_t addr = SHT40_I2C_DEF_ADDR, extI2C i2cr, extI2C i2cw);
+	SHT40(uint8_t addr, extI2C i2cr, extI2C i2cw);
 
 	/**
 	 * @brief Object deconstructor.
@@ -137,27 +146,27 @@ class SHT40 {
 	/**
 	 * @brief Measures temerature and RH.
 	 * 
-	 * @param type Type of measurement. 
-	 * @return SHT40_NOK if NAK/NACK is received, SHT40 is busy.
-	 * @return SHT40_OK if measurement was OK. 
+	 * @param type Type of measurement. See \ref SHT40_meas_t
+	 * @return \c SHT40_NOK if NAK/NACK is received, SHT40 is busy.
+	 * @return \c SHT40_OK if measurement was OK. 
 	 */
 	uint8_t measure(SHT40_meas_t type);
 
 	/**
 	 * @brief Calculates temperature from last measure call.
 	 * 
-	 * @param &out Output variable for temperature in °C.
-	 * @return SHT40_NOK if measurement data does not exist.
-	 * @return SHT40_OK if temperature is calculated.
+	 * @param out Reference to output variable for temperature.
+	 * @return \c SHT40_NOK if measurement data does not exist.
+	 * @return \c SHT40_OK if temperature is calculated.
 	 */
 	uint8_t temperature(uint32_t& out);
 
 	/**
 	 * @brief Calculates RH from last measure call.
 	 * 
-	 * @param &out Output variable for relative humidity in %.
-	 * @return SHT40_NOK if measurement data does not exist.
-	 * @return SHT40_OK	if relative humidity is calculated.
+	 * @param out Reference to output variable for relative humidity in %.
+	 * @return \c SHT40_NOK if measurement data does not exist.
+	 * @return \c SHT40_OK	if relative humidity is calculated.
 	 */
 	uint8_t rh(int16_t& out);
 
@@ -180,11 +189,11 @@ class SHT40 {
 	 * 
 	 * Check provided external I2C operations handlers and sets temperature unit
 	 * 
-	 * @param u Desired temperature unit.
-	 * @return SHT40_I2CH_R if I2C read handler is null.
-	 * @return SHT40_I2CH_W if I2C write handler is null.
-	 * @return SHT40_NOK if SN is 0x00000000 or 0xFFFFFFFF.
-	 * @return SHT40_OK if everything is OK.
+	 * @param u Desired temperature unit. See \ref SHT40_unit_t
+	 * @return \c SHT40_I2CH_R if I2C read handler is null.
+	 * @return \c SHT40_I2CH_W if I2C write handler is null.
+	 * @return \c SHT40_NOK if SN is 0x00000000 or 0xFFFFFFFF.
+	 * @return \c SHT40_OK if everything is OK.
 	 */
 	uint8_t init(SHT40_unit_t u);
 
@@ -198,7 +207,7 @@ class SHT40 {
 	/**
 	 * @brief Sets temperature unit.
 	 * 
-	 * @param u Desired temperature unit.
+	 * @param u Desired temperature unit. See \ref SHT40_unit_t
 	 * @return No return value.
 	 * 
 	 * @see SHT40_unit_t
@@ -208,7 +217,7 @@ class SHT40 {
 	/**
 	 * @brief Get temperature unit.
 	 * 
-	 * @return Selected temperature unit.
+	 * @return Selected temperature unit. See \ref SHT40_unit_t
 	 * @see SHT40_unit_t
 	 */
 	inline SHT40_unit_t getUnit(void) const;
@@ -217,23 +226,38 @@ class SHT40 {
 	// PRIVATE STUFF
 	private:
 	// VARIABLES
-	union { /**< @brief Union for SHT40 data. */
+	/**
+	 * @brief Union for SHT40 data.
+	 * 
+	 * @note This union is aligned by one byte.
+	 */
+	union {
 		uint8_t header; /**< @brief Header for NACK/NAK is sensor is busy. */
 
-		struct { /**< @brief Struct for SHT40 serial number data. */
+		/**
+		 * @brief Struct for SHT40 serial number data.
+		 * 
+		 * @note This struct is aligned by one byte.
+		 */
+		struct {
 			uint16_t sn1;
 			uint8_t crc1;
 			uint16_t sn2;
 			uint8_t crc2;
-		} snData;
+		} __attribute__((packed, aligned(1))) snData;
 
-		struct { /**< @brief Struct for SHT40 measurement data. */
+		/**
+		 * @brief Struct for SHT40 measurement data.
+		 * 
+		 * @note This struct is aligned by one byte.
+		 */
+		struct {
 			uint16_t temp;
 			uint8_t crc1;
 			uint16_t rh;
 			uint8_t crc2;
-		} mData;
-	} data;
+		} __attribute__((packed, aligned(1))) mData;
+	};
 
 	uint8_t address = SHT40_I2C_DEF_ADDR; /**< @brief I2C slave device address. */
 	extI2C I2CRead = nullptr; /**< @brief Pointer to external I2C read function. */

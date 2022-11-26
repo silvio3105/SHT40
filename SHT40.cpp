@@ -66,39 +66,39 @@ uint8_t SHT40::measure(SHT40_meas_t type)
 	I2CWrite(address, (uint8_t*)&type, 1);  
 
 	// Read from SHT40  
-	I2CRead(address, (uint8_t*)&data.mData, 6);
+	I2CRead(address, (uint8_t*)&mData, 6);
 
 	// If NAK is received
-	if (data.header == SHT40_NAK) return SHT40_NOK;
+	if (header == SHT40_NAK) return SHT40_NOK;
 	return SHT40_OK;    
 }
 
 uint8_t SHT40::temperature(uint32_t& out)
 {
 	// If temperature data is zero
-	if (!data.mData.temp) return SHT40_NOK;
+	if (!mData.temp) return SHT40_NOK;
 
 	// Calculate temperature from SHT40 data in desired temperature unit
-	if (getUnit() == SHT40_UNIT_C) out = -45 + (175 * ((uint32_t)data.mData.temp / 65535));
-		else out = -49 + (315 * ((uint32_t)data.mData.temp / 65535));
+	if (getUnit() == SHT40_UNIT_C) out = -45 + (175 * ((uint32_t)mData.temp / 65535));
+		else out = -49 + (315 * ((uint32_t)mData.temp / 65535));
 
 	// Reset temperature data to zero
-	data.mData.temp = 0;
+	mData.temp = 0;
 	return SHT40_OK;
 }
 
 uint8_t SHT40::rh(int16_t& out)
 {
 	// If RH data is zero
-	if (!data.mData.rh) return SHT40_NOK;
+	if (!mData.rh) return SHT40_NOK;
 
 	// Calculate RH from SHT40 data
-	out =  -6 + (125 * ((uint32_t)data.mData.rh / 65535));
+	out =  -6 + (125 * ((uint32_t)mData.rh / 65535));
 	if (out > 100) out = 100;
 	else if (out < 0) out = 0;
 
 	// Reset RH data to zero
-	data.mData.rh = 0;
+	mData.rh = 0;
 	return SHT40_OK;
 }
 
@@ -110,13 +110,13 @@ uint32_t SHT40::whoAmI(void)
     I2CWrite(address, (uint8_t*)&cmd, 1);
 
 	// Read S/N from SHT40
-    I2CRead(address, (uint8_t*)&data.snData, 6);
+    I2CRead(address, (uint8_t*)&snData, 6);
 
 	// If NAK is received
-	if (data.header == SHT40_NAK) return SHT40_NOK;
+	if (header == SHT40_NAK) return SHT40_NOK;
 
 	// Concat 2x16-bit S/N data to 32-bit S/N
-	return (uint32_t)((data.snData.sn1 << 16) | data.snData.sn2);	
+	return (uint32_t)((snData.sn1 << 16) | snData.sn2);	
 }
 
 void SHT40::reset(void) const
@@ -148,7 +148,7 @@ uint8_t SHT40::init(SHT40_unit_t u)
 inline void SHT40::clear(void)
 {
 	// Clear measured data
-	memset(&data.mData, 0, sizeof(data.mData));
+	memset(&mData, 0, sizeof(mData));
 }
 
 inline void SHT40::setUnit(SHT40_unit_t u)

@@ -24,4 +24,4 @@ This License shall be included in all functional textual files.
 
 ---
 
-Copyright (c) silvio3105, 2022
+Copyright (c) 2022, silvio3105

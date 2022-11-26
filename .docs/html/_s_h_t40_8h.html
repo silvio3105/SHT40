@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">SHT40<span id="projectnumber">&#160;v0.1</span>
+   <div id="projectname">SHT40
    </div>
    <div id="projectbrief">Frameworkless I2C driver for SHT40 sensor written in C++.</div>
   </td>
@@ -95,7 +95,8 @@ $(document).ready(function(){initNavTree('_s_h_t40_8h.html',''); initResizable()
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">SHT40.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -193,7 +194,7 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:gad34c3eaa3b107949fa7c888815293ad2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2">SHT40_meas_t</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2afe11220754c90b49efe332b787297258">TRH_H</a> = SHT40_M_TRH_HP
+&#160;&#160;<b>TRH_H</b> = SHT40_M_TRH_HP
 , <b>TRH_M</b> = SHT40_M_TRH_MP
 , <b>TRH_L</b> = SHT40_M_TRH_LP
 , <b>TRH_H_H02W1S</b> = SHT40_TRH_H_H02W1S
@@ -206,11 +207,28 @@ Enumerations</h2></td></tr>
 &#160;&#160;<b>TRH_H_H002W01S</b> = SHT40_TRH_H_H002W01S
 <br />
  }</td></tr>
+<tr class="memdesc:gad34c3eaa3b107949fa7c888815293ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measurement types.  <a href="group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2">More...</a><br /></td></tr>
 <tr class="separator:gad34c3eaa3b107949fa7c888815293ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga471b19e253a7d6ef9d8b7f58719fd99c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> : uint8_t { <a class="el" href="group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99ca42002bfdc377e7ba21bc738149b1834b">SHT40_UNIT_C</a>
+<tr class="memitem:ga471b19e253a7d6ef9d8b7f58719fd99c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> : uint8_t { <b>SHT40_UNIT_C</b>
 , <b>SHT40_UNIT_F</b>
  }</td></tr>
+<tr class="memdesc:ga471b19e253a7d6ef9d8b7f58719fd99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temperature units.  <a href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">More...</a><br /></td></tr>
 <tr class="separator:ga471b19e253a7d6ef9d8b7f58719fd99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a9d86986c915520a1d14ec713470e9c48"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#a9d86986c915520a1d14ec713470e9c48">sn1</a></td></tr>
+<tr class="separator:a9d86986c915520a1d14ec713470e9c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fe0b456274bc1c44577429ccf02525b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#a2fe0b456274bc1c44577429ccf02525b">crc1</a></td></tr>
+<tr class="separator:a2fe0b456274bc1c44577429ccf02525b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a331ee261e069f61352db58f8696f2b0c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#a331ee261e069f61352db58f8696f2b0c">sn2</a></td></tr>
+<tr class="separator:a331ee261e069f61352db58f8696f2b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49240eec60511697d33a195f2b7e0955"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#a49240eec60511697d33a195f2b7e0955">crc2</a></td></tr>
+<tr class="separator:a49240eec60511697d33a195f2b7e0955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36142ddde297ed1d5577c81230997301"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#a36142ddde297ed1d5577c81230997301">temp</a></td></tr>
+<tr class="separator:a36142ddde297ed1d5577c81230997301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71acc7f68557ac2e592c2b625e295ee"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#ac71acc7f68557ac2e592c2b625e295ee">rh</a></td></tr>
+<tr class="separator:ac71acc7f68557ac2e592c2b625e295ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Header file for <a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> driver. </p>
@@ -220,13 +238,110 @@ Enumerations</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>silvio3105 (c) 2022 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Variable Documentation</h2>
+<a id="a2fe0b456274bc1c44577429ccf02525b" name="a2fe0b456274bc1c44577429ccf02525b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fe0b456274bc1c44577429ccf02525b">&#9670;&#160;</a></span>crc1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t crc1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00001">1</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+
+</div>
+</div>
+<a id="a49240eec60511697d33a195f2b7e0955" name="a49240eec60511697d33a195f2b7e0955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49240eec60511697d33a195f2b7e0955">&#9670;&#160;</a></span>crc2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t crc2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00003">3</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+
+</div>
+</div>
+<a id="ac71acc7f68557ac2e592c2b625e295ee" name="ac71acc7f68557ac2e592c2b625e295ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac71acc7f68557ac2e592c2b625e295ee">&#9670;&#160;</a></span>rh</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t rh</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00002">2</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+
+</div>
+</div>
+<a id="a9d86986c915520a1d14ec713470e9c48" name="a9d86986c915520a1d14ec713470e9c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d86986c915520a1d14ec713470e9c48">&#9670;&#160;</a></span>sn1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t sn1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00000">0</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+
+</div>
+</div>
+<a id="a331ee261e069f61352db58f8696f2b0c" name="a331ee261e069f61352db58f8696f2b0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331ee261e069f61352db58f8696f2b0c">&#9670;&#160;</a></span>sn2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t sn2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00002">2</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+
+</div>
+</div>
+<a id="a36142ddde297ed1d5577c81230997301" name="a36142ddde297ed1d5577c81230997301"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36142ddde297ed1d5577c81230997301">&#9670;&#160;</a></span>temp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t temp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00000">0</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="_s_h_t40_8h.html">SHT40.h</a></li>
-    <li class="footer">Generated on Mon Oct 31 2022 19:38:32 for SHT40 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Sat Nov 26 2022 21:44:55 for SHT40 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

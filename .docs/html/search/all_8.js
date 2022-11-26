@@ -1,7 +1,7 @@
 var searchData=
 [
   ['setunit_0',['setUnit',['../class_s_h_t40.html#a845a86373be69ec11e57bb4af74ff914',1,'SHT40']]],
-  ['sht40_1',['SHT40',['../class_s_h_t40.html',1,'SHT40'],['../class_s_h_t40.html#a916fcd27d0025d4e101e57d31c477020',1,'SHT40::SHT40()'],['../group___s_h_t40.html',1,'(Global Namespace)']]],
+  ['sht40_1',['SHT40',['../class_s_h_t40.html',1,'SHT40'],['../class_s_h_t40.html#ac0b628518b7080ed4960255091814956',1,'SHT40::SHT40()'],['../group___s_h_t40.html',1,'(Global Namespace)']]],
   ['sht40_20i2c_20driver_2',['SHT40 I2C Driver',['../md__r_e_a_d_m_e.html',1,'']]],
   ['sht40_2ecpp_3',['SHT40.cpp',['../_s_h_t40_8cpp.html',1,'']]],
   ['sht40_2eh_4',['SHT40.h',['../_s_h_t40_8h.html',1,'']]],
@@ -23,7 +23,5 @@ var searchData=
   ['sht40_5ftrh_5fh_5fh011w1s_20',['SHT40_TRH_H_H011W1S',['../group___s_h_t40.html#gad67c440b07df8820bea5bd2bb56ab3e1',1,'SHT40.h']]],
   ['sht40_5ftrh_5fh_5fh02w01s_21',['SHT40_TRH_H_H02W01S',['../group___s_h_t40.html#ga43c05a8313dfa7896fd1701ae8cec70e',1,'SHT40.h']]],
   ['sht40_5ftrh_5fh_5fh02w1s_22',['SHT40_TRH_H_H02W1S',['../group___s_h_t40.html#gaf1d781a1ba789d150c28a340fadd28f5',1,'SHT40.h']]],
-  ['sht40_5funit_5fc_23',['SHT40_UNIT_C',['../group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99ca42002bfdc377e7ba21bc738149b1834b',1,'SHT40.h']]],
-  ['sht40_5funit_5ft_24',['SHT40_unit_t',['../group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c',1,'SHT40.h']]],
-  ['sn1_25',['sn1',['../class_s_h_t40.html#a5e4aa4c4f6b5bf922c2a1bd4cb452716',1,'SHT40']]]
+  ['sht40_5funit_5ft_23',['SHT40_unit_t',['../group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c',1,'SHT40.h']]]
 ];

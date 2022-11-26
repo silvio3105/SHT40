@@ -1,5 +1,5 @@
 <map id="SHT40::setUnit" name="SHT40::setUnit">
 <area shape="rect" id="node1" title="Sets temperature unit." alt="" coords="164,31,275,56"/>
 <area shape="rect" id="node2" href="$class_s_h_t40.html#a7c44b45430aa66546d853ca517b1eb8f" title="Initialize SHT40 object." alt="" coords="17,5,104,31"/>
-<area shape="rect" id="node3" href="$class_s_h_t40.html#a916fcd27d0025d4e101e57d31c477020" title="Object constructor." alt="" coords="5,55,116,80"/>
+<area shape="rect" id="node3" href="$class_s_h_t40.html#ac0b628518b7080ed4960255091814956" title="Object constructor." alt="" coords="5,55,116,80"/>
 </map>

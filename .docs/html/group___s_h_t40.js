@@ -1,7 +1,7 @@
 var group___s_h_t40 =
 [
     [ "SHT40", "class_s_h_t40.html", [
-      [ "SHT40", "class_s_h_t40.html#a916fcd27d0025d4e101e57d31c477020", null ],
+      [ "SHT40", "class_s_h_t40.html#ac0b628518b7080ed4960255091814956", null ],
       [ "~SHT40", "class_s_h_t40.html#ae74f4b03548e0906ef04903b584da1d0", null ],
       [ "clear", "class_s_h_t40.html#a88b01bafce3ff94d80db39b506174504", null ],
       [ "getUnit", "class_s_h_t40.html#aabc3e928e94a31e8c8cb2a9757ae9452", null ],
@@ -16,8 +16,6 @@ var group___s_h_t40 =
       [ "header", "class_s_h_t40.html#a40a8e2b514a16b94fcf2f040bb67da6a", null ],
       [ "I2CRead", "class_s_h_t40.html#a9a2a900e107bcc4f99e3d0301c7900aa", null ],
       [ "I2CWrite", "class_s_h_t40.html#a82544bc4a4700d9298133a64cef82d7c", null ],
-      [ "sn1", "class_s_h_t40.html#a5e4aa4c4f6b5bf922c2a1bd4cb452716", null ],
-      [ "temp", "class_s_h_t40.html#ac4e3f975a6f2da4f2dc555a0905c7b15", null ],
       [ "unit", "class_s_h_t40.html#af8d17944c1304187950aad9e8a558c52", null ]
     ] ],
     [ "SHT40_I2C_DEF_ADDR", "group___s_h_t40.html#gac45ac567f29db98fb46b00a8bfc6b809", null ],
@@ -38,10 +36,6 @@ var group___s_h_t40 =
     [ "SHT40_TRH_H_H02W01S", "group___s_h_t40.html#ga43c05a8313dfa7896fd1701ae8cec70e", null ],
     [ "SHT40_TRH_H_H02W1S", "group___s_h_t40.html#gaf1d781a1ba789d150c28a340fadd28f5", null ],
     [ "extI2C", "group___s_h_t40.html#ga4c20ba2e81b46c1ad170bac078c04246", null ],
-    [ "SHT40_meas_t", "group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2", [
-      [ "TRH_H", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2afe11220754c90b49efe332b787297258", null ]
-    ] ],
-    [ "SHT40_unit_t", "group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c", [
-      [ "SHT40_UNIT_C", "group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99ca42002bfdc377e7ba21bc738149b1834b", null ]
-    ] ]
+    [ "SHT40_meas_t", "group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2", null ],
+    [ "SHT40_unit_t", "group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c", null ]
 ];
