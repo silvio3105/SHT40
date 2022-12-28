@@ -2,8 +2,6 @@
  * @file SHT40.cpp
  * @author silvio3105 (www.github.com/silvio3105)
  * @brief SHT40 C++ file.
- * @version v0.1r1
- * @date 2022-10-22
  * 
  * @copyright silvio3105 (c) 2022
  * 
@@ -33,8 +31,18 @@ This License shall be included in all functional textual files.
 #include            <string.h>
 
 
+// ----- STATIC FUNCTION DECLARATIONS
+/**
+ * @brief Get required delay for measurement type.
+ * 
+ * @param type Measurement type. See \ref SHT40_meas_t
+ * @return Required delay in ms. 
+ */
+static uint16_t getDelay(SHT40_meas_t type);
+
+
 // ----- METHODS DEFINITIONS
-SHT40::SHT40(uint8_t addr = SHT40_I2C_DEF_ADDR, extI2C i2cr, extI2C i2cw)
+SHT40::SHT40(uint8_t addr, extI2C i2cr, extI2C i2cw)
 {
 	// Store arguments into object
 	address = addr; 
@@ -63,42 +71,44 @@ SHT40::~SHT40(void)
 uint8_t SHT40::measure(SHT40_meas_t type)
 {
 	// Write command to SHT40
-	I2CWrite(address, (uint8_t*)&type, 1);  
+	I2CWrite(address, (uint8_t*)&type, 1, getDelay(type));  
 
 	// Read from SHT40  
-	I2CRead(address, (uint8_t*)&mData, 6);
+	I2CRead(address, (uint8_t*)&mData, 6, 0);
 
 	// If NAK is received
 	if (header == SHT40_NAK) return SHT40_NOK;
 	return SHT40_OK;    
 }
 
-uint8_t SHT40::temperature(uint32_t& out)
+uint8_t SHT40::temperature(int16_t& out)
 {
 	// If temperature data is zero
 	if (!mData.temp) return SHT40_NOK;
 
 	// Calculate temperature from SHT40 data in desired temperature unit
-	if (getUnit() == SHT40_UNIT_C) out = -45 + (175 * ((uint32_t)mData.temp / 65535));
-		else out = -49 + (315 * ((uint32_t)mData.temp / 65535));
+	if (getUnit() == SHT40_UNIT_C) out = -45 + (175 * ((mData.temp[0] << 8) | mData.temp[1]) / 655) / 100;
+		else out = -49 + (315 * (((mData.temp[0] << 8) | mData.temp[1]) / 655)) / 100;
 
 	// Reset temperature data to zero
-	mData.temp = 0;
+	mData.temp[0] = 0;
+	mData.temp[1] = 0;
 	return SHT40_OK;
 }
 
-uint8_t SHT40::rh(int16_t& out)
+uint8_t SHT40::rh(uint8_t& out)
 {
 	// If RH data is zero
 	if (!mData.rh) return SHT40_NOK;
 
 	// Calculate RH from SHT40 data
-	out =  -6 + (125 * ((uint32_t)mData.rh / 65535));
+	out =  -6 + (125 * (((mData.rh[0] << 8) | mData.rh[1]) / 655)) / 100;
 	if (out > 100) out = 100;
 	else if (out < 0) out = 0;
 
 	// Reset RH data to zero
-	mData.rh = 0;
+	mData.rh[0] = 0;
+	mData.rh[1] = 0;
 	return SHT40_OK;
 }
 
@@ -107,16 +117,16 @@ uint32_t SHT40::whoAmI(void)
 	uint8_t cmd = SHT40_SN;
 
 	// Send S/N read command
-    I2CWrite(address, (uint8_t*)&cmd, 1);
+    I2CWrite(address, (uint8_t*)&cmd, 1, 1);
 
 	// Read S/N from SHT40
-    I2CRead(address, (uint8_t*)&snData, 6);
+    I2CRead(address, (uint8_t*)&snData, 6, 0);
 
 	// If NAK is received
 	if (header == SHT40_NAK) return SHT40_NOK;
 
-	// Concat 2x16-bit S/N data to 32-bit S/N
-	return (uint32_t)((snData.sn1 << 16) | snData.sn2);	
+	// Concat 4x8-bit S/N data to 32-bit S/N
+	return ((snData.sn1[1] << 24) | (snData.sn1[0] << 16) | (snData.sn2[1] << 8) | snData.sn2[0]);	
 }
 
 void SHT40::reset(void) const
@@ -124,7 +134,7 @@ void SHT40::reset(void) const
 	uint8_t cmd = SHT40_RST;
 
 	// Send reset command to SHT40
-	I2CWrite(address, (uint8_t*)&cmd, 1); 
+	I2CWrite(address, (uint8_t*)&cmd, 1, 0); 
 }
 
 uint8_t SHT40::init(SHT40_unit_t u)
@@ -140,7 +150,7 @@ uint8_t SHT40::init(SHT40_unit_t u)
 	uint32_t tmp = whoAmI();
 
 	// If S/N is bits are not zeros or ones
-	if (!tmp || tmp == 0xFFFFFFFF) return SHT40_NOK;
+	if (tmp == 0 || tmp == 0xFFFFFFFF) return SHT40_NOK;
 
 	return SHT40_OK;
 }
@@ -161,6 +171,30 @@ inline SHT40_unit_t SHT40::getUnit(void) const
 {
 	// Return temperature unit
 	return unit;
+}
+
+
+// ----- STATIC FUNCTION DEFINITIONS
+static uint16_t getDelay(SHT40_meas_t type)
+{
+	switch (type)
+	{
+		case TRH_H: return 9; // 8.2ms
+		case TRH_M: return 5; // 4.5ms
+		case TRH_L: return 2; // 1.7ms
+
+		case TRH_H_H02W1S:
+		case TRH_H_H011W1S:
+		case TRH_H_H002W1S: return 1150; // 1100ms
+
+		case TRH_H_H02W01S:
+		case TRH_H_H011W01S:
+		case TRH_H_H002W01S: return 120; // 110ms
+
+		default: break;
+	}
+
+	return 1;
 }
 
 // END WITH NEW LINE
