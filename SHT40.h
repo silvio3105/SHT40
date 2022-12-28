@@ -2,8 +2,6 @@
  * @file SHT40.h
  * @author silvio3105 (www.github.com/silvio3105)
  * @brief Header file for SHT40 driver.
- * @version v0.1r1
- * @date 2022-10-22
  * 
  * @copyright silvio3105 (c) 2022
  * 
@@ -48,28 +46,25 @@ This License shall be included in all functional textual files.
 #define SHT40_I2CH_R			(0x02) /**< @brief Return value representing missing read I2C handler. */
 #define SHT40_I2CH_W			(0x03) /**< @brief Return value representing missing write I2C handler. */
 
+// I2C ADDESSES
+#define I2C_ADDR_SHT40_AD		(0x44) /**< @brief I2C address for SHT40-AD. */
+#define I2C_ADDR_SHT40_B		(0x45) /**< @brief I2C address for SHT40-B. */
+
 // CONFIG
-/**
- * @brief Default SHT40 I2C address.
- * 
- * @note 0x44 for SHT40-A
- * @note 0x45 for SHT40-B
- */
-#define SHT40_I2C_DEF_ADDR      (0x44) // For SHT40-AD
-//#define SHT40_I2C_DEF_ADDR      (0x45) // For SHT40-B
+#define SHT40_I2C_DEF_ADDR      I2C_ADDR_SHT40_AD /**< @brief Default SHT40 I2C address. */
 
 // SHT40 COMMANDS
-#define SHT40_M_TRH_HP			(0xFD) /**< @brief High precision temperature & RH measurement without heater. */
-#define SHT40_M_TRH_MP			(0xF6) /**< @brief Medium precision temperature & RH measurement without heater. */
-#define SHT40_M_TRH_LP			(0xE0) /**< @brief Low precision temperature & RH measurement without heater. */
-#define SHT40_SN				(0x89) /**< @brief Serial number command. */
-#define SHT40_RST				(0x94) /**< @brief Soft reset command. */
-#define SHT40_TRH_H_H02W1S		(0x39) /**< @brief High precision temperature & RH measurement with 0.2W heater 1s. */
-#define SHT40_TRH_H_H02W01S		(0x32) /**< @brief High precision temperature & RH measurement with 0.2W heater 0.1s. */
-#define SHT40_TRH_H_H011W1S		(0x2F) /**< @brief High precision temperature & RH measurement with 0.1W heater 1s. */
-#define SHT40_TRH_H_H011W01S	(0x24) /**< @brief High precision temperature & RH measurement with 0.1W heater 0.1s. */
-#define SHT40_TRH_H_H002W1S		(0x1E) /**< @brief High precision temperature & RH measurement with 0.02W heater 1s. */  
-#define SHT40_TRH_H_H002W01S	(0x15) /**< @brief High precision temperature & RH measurement with 0.02W heater 0.1s. */ 
+#define SHT40_M_TRH_HP			(0xFD) /**< @brief Command for High precision temperature & RH measurement without heater. */
+#define SHT40_M_TRH_MP			(0xF6) /**< @brief Command for Medium precision temperature & RH measurement without heater. */
+#define SHT40_M_TRH_LP			(0xE0) /**< @brief Command for Low precision temperature & RH measurement without heater. */
+#define SHT40_SN				(0x89) /**< @brief Command for Serial number. */
+#define SHT40_RST				(0x94) /**< @brief Command for Soft reset. */
+#define SHT40_TRH_H_H02W1S		(0x39) /**< @brief Command for High precision temperature & RH measurement with 0.2W heater 1s. */
+#define SHT40_TRH_H_H02W01S		(0x32) /**< @brief Command for High precision temperature & RH measurement with 0.2W heater 0.1s. */
+#define SHT40_TRH_H_H011W1S		(0x2F) /**< @brief Command for High precision temperature & RH measurement with 0.1W heater 1s. */
+#define SHT40_TRH_H_H011W01S	(0x24) /**< @brief Command for High precision temperature & RH measurement with 0.1W heater 0.1s. */
+#define SHT40_TRH_H_H002W1S		(0x1E) /**< @brief Command for High precision temperature & RH measurement with 0.02W heater 1s. */  
+#define SHT40_TRH_H_H002W01S	(0x15) /**< @brief Command for High precision temperature & RH measurement with 0.02W heater 0.1s. */ 
 
 
 // ----- ENUMATORS
@@ -77,7 +72,7 @@ This License shall be included in all functional textual files.
  * @brief Measurement types.
  * 
  */
-typedef enum SHT40_meas_t: uint8_t {
+enum SHT40_meas_t: uint8_t {
 	TRH_H = SHT40_M_TRH_HP,
 	TRH_M = SHT40_M_TRH_MP,
 	TRH_L = SHT40_M_TRH_LP,
@@ -93,9 +88,9 @@ typedef enum SHT40_meas_t: uint8_t {
  * @brief Temperature units.
  * 
  */
-typedef enum SHT40_unit_t: uint8_t {
-	SHT40_UNIT_C,
-	SHT40_UNIT_F
+enum SHT40_unit_t: uint8_t {
+	SHT40_UNIT_C, /**< @brief Celsius temperature unit. */
+	SHT40_UNIT_F /**< @brief Fahrenheit temperature unit. */
 };
 
 
@@ -106,10 +101,11 @@ typedef enum SHT40_unit_t: uint8_t {
  * @param addr An address of I2C slave device.
  * @param *data Pointer to data array.
  * @param len Lenth of array pointed with *data.
+ * @param delay Delay in ms after I2C call.
  * @return No return value.
  * 
  */
-typedef void (*extI2C)(uint8_t addr, uint8_t* data, uint8_t len); 
+typedef void (*extI2C)(uint8_t addr, uint8_t* data, uint8_t len, uint16_t delay); 
 
 
 // ----- CLASSES
@@ -122,7 +118,7 @@ class SHT40 {
 	public:
 	// CONSTUCTORS AND DECONSTRUCTORS DECLARATIONS
 	/**
-	 * @brief Object constructor.
+	 * @brief SHT40 object constructor.
 	 * 
 	 * @param addr Address of I2C slave device.
 	 * @param i2cr Pointer to external I2C read function.
@@ -135,7 +131,7 @@ class SHT40 {
 	SHT40(uint8_t addr, extI2C i2cr, extI2C i2cw);
 
 	/**
-	 * @brief Object deconstructor.
+	 * @brief SHT40 object deconstructor.
 	 * 
 	 * @return No return value.
 	 * 
@@ -159,7 +155,7 @@ class SHT40 {
 	 * @return \c SHT40_NOK if measurement data does not exist.
 	 * @return \c SHT40_OK if temperature is calculated.
 	 */
-	uint8_t temperature(uint32_t& out);
+	uint8_t temperature(int16_t& out);
 
 	/**
 	 * @brief Calculates RH from last measure call.
@@ -168,7 +164,7 @@ class SHT40 {
 	 * @return \c SHT40_NOK if measurement data does not exist.
 	 * @return \c SHT40_OK	if relative humidity is calculated.
 	 */
-	uint8_t rh(int16_t& out);
+	uint8_t rh(uint8_t& out);
 
 	/**
 	 * @brief Reads unique serial number.
@@ -227,7 +223,7 @@ class SHT40 {
 	private:
 	// VARIABLES
 	/**
-	 * @brief Union for SHT40 data.
+	 * @brief Union of SHT40 data.
 	 * 
 	 * @note This union is aligned by one byte.
 	 */
@@ -240,10 +236,10 @@ class SHT40 {
 		 * @note This struct is aligned by one byte.
 		 */
 		struct {
-			uint16_t sn1;
-			uint8_t crc1;
-			uint16_t sn2;
+			uint8_t sn2[2];
 			uint8_t crc2;
+			uint8_t sn1[2];
+			uint8_t crc1;
 		} __attribute__((packed, aligned(1))) snData;
 
 		/**
@@ -252,10 +248,10 @@ class SHT40 {
 		 * @note This struct is aligned by one byte.
 		 */
 		struct {
-			uint16_t temp;
-			uint8_t crc1;
-			uint16_t rh;
+			uint8_t temp[2];
 			uint8_t crc2;
+			uint8_t rh[2];
+			uint8_t crc1;
 		} __attribute__((packed, aligned(1))) mData;
 	};
 

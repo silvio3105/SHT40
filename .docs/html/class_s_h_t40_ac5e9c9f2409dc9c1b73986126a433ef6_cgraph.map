@@ -1,0 +1,4 @@
+<map id="SHT40::measure" name="SHT40::measure">
+<area shape="rect" id="node1" title="Measures temerature and RH." alt="" coords="5,5,125,31"/>
+<area shape="rect" id="node2" href="$_s_h_t40_8cpp.html#a758dc50c962089fd445a7894899577fe" title="Get required delay for measurement type." alt="" coords="173,5,247,31"/>
+</map>

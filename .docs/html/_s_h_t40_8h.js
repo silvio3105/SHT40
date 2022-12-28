@@ -1,5 +1,7 @@
 var _s_h_t40_8h =
 [
+    [ "I2C_ADDR_SHT40_AD", "group___s_h_t40.html#ga3fef204f2a54bd4d76c8c0e8aad00b33", null ],
+    [ "I2C_ADDR_SHT40_B", "group___s_h_t40.html#ga908ac8b13afcdbe23da9b58684fb6d97", null ],
     [ "SHT40_I2C_DEF_ADDR", "group___s_h_t40.html#gac45ac567f29db98fb46b00a8bfc6b809", null ],
     [ "SHT40_I2CH_R", "group___s_h_t40.html#gaf5431f60376dd99c14d916c29db6edb1", null ],
     [ "SHT40_I2CH_W", "group___s_h_t40.html#ga88bc989eef427f900354602e91da463d", null ],
@@ -17,7 +19,7 @@ var _s_h_t40_8h =
     [ "SHT40_TRH_H_H011W1S", "group___s_h_t40.html#gad67c440b07df8820bea5bd2bb56ab3e1", null ],
     [ "SHT40_TRH_H_H02W01S", "group___s_h_t40.html#ga43c05a8313dfa7896fd1701ae8cec70e", null ],
     [ "SHT40_TRH_H_H02W1S", "group___s_h_t40.html#gaf1d781a1ba789d150c28a340fadd28f5", null ],
-    [ "extI2C", "group___s_h_t40.html#ga4c20ba2e81b46c1ad170bac078c04246", null ],
+    [ "extI2C", "group___s_h_t40.html#ga61499c138172104fcdac9612f6e09e45", null ],
     [ "SHT40_meas_t", "group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2", [
       [ "TRH_H", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2afe11220754c90b49efe332b787297258", null ],
       [ "TRH_M", "group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2a655ecca862cc97b12b5fcecffe437b58", null ],

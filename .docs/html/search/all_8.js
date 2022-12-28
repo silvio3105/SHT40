@@ -23,5 +23,7 @@ var searchData=
   ['sht40_5ftrh_5fh_5fh011w1s_20',['SHT40_TRH_H_H011W1S',['../group___s_h_t40.html#gad67c440b07df8820bea5bd2bb56ab3e1',1,'SHT40.h']]],
   ['sht40_5ftrh_5fh_5fh02w01s_21',['SHT40_TRH_H_H02W01S',['../group___s_h_t40.html#ga43c05a8313dfa7896fd1701ae8cec70e',1,'SHT40.h']]],
   ['sht40_5ftrh_5fh_5fh02w1s_22',['SHT40_TRH_H_H02W1S',['../group___s_h_t40.html#gaf1d781a1ba789d150c28a340fadd28f5',1,'SHT40.h']]],
-  ['sht40_5funit_5ft_23',['SHT40_unit_t',['../group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c',1,'SHT40.h']]]
+  ['sht40_5funit_5fc_23',['SHT40_UNIT_C',['../group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99ca42002bfdc377e7ba21bc738149b1834b',1,'SHT40.h']]],
+  ['sht40_5funit_5ff_24',['SHT40_UNIT_F',['../group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99cac24ab6df15b1fed58a9a691438e95e6e',1,'SHT40.h']]],
+  ['sht40_5funit_5ft_25',['SHT40_unit_t',['../group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c',1,'SHT40.h']]]
 ];
