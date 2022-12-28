@@ -8,9 +8,9 @@ var group___s_h_t40 =
       [ "init", "class_s_h_t40.html#a7c44b45430aa66546d853ca517b1eb8f", null ],
       [ "measure", "class_s_h_t40.html#ac5e9c9f2409dc9c1b73986126a433ef6", null ],
       [ "reset", "class_s_h_t40.html#a85c70255c3236f69db61909072648285", null ],
-      [ "rh", "class_s_h_t40.html#a804c34f74e678f782814a6fe78a989b0", null ],
+      [ "rh", "class_s_h_t40.html#a9bfa6e924bab26d3556d6783f83ae273", null ],
       [ "setUnit", "class_s_h_t40.html#a845a86373be69ec11e57bb4af74ff914", null ],
-      [ "temperature", "class_s_h_t40.html#adf814025da978d2b3d652d1310b3db54", null ],
+      [ "temperature", "class_s_h_t40.html#a54816665197165bfc23b2153bf4ca8a7", null ],
       [ "whoAmI", "class_s_h_t40.html#a8d7de0ee5ac74c48ebdb7d0a558e9fad", null ],
       [ "address", "class_s_h_t40.html#ac60694673a568d76ff509917b8c9515f", null ],
       [ "header", "class_s_h_t40.html#a40a8e2b514a16b94fcf2f040bb67da6a", null ],
@@ -18,6 +18,8 @@ var group___s_h_t40 =
       [ "I2CWrite", "class_s_h_t40.html#a82544bc4a4700d9298133a64cef82d7c", null ],
       [ "unit", "class_s_h_t40.html#af8d17944c1304187950aad9e8a558c52", null ]
     ] ],
+    [ "I2C_ADDR_SHT40_AD", "group___s_h_t40.html#ga3fef204f2a54bd4d76c8c0e8aad00b33", null ],
+    [ "I2C_ADDR_SHT40_B", "group___s_h_t40.html#ga908ac8b13afcdbe23da9b58684fb6d97", null ],
     [ "SHT40_I2C_DEF_ADDR", "group___s_h_t40.html#gac45ac567f29db98fb46b00a8bfc6b809", null ],
     [ "SHT40_I2CH_R", "group___s_h_t40.html#gaf5431f60376dd99c14d916c29db6edb1", null ],
     [ "SHT40_I2CH_W", "group___s_h_t40.html#ga88bc989eef427f900354602e91da463d", null ],
@@ -35,7 +37,10 @@ var group___s_h_t40 =
     [ "SHT40_TRH_H_H011W1S", "group___s_h_t40.html#gad67c440b07df8820bea5bd2bb56ab3e1", null ],
     [ "SHT40_TRH_H_H02W01S", "group___s_h_t40.html#ga43c05a8313dfa7896fd1701ae8cec70e", null ],
     [ "SHT40_TRH_H_H02W1S", "group___s_h_t40.html#gaf1d781a1ba789d150c28a340fadd28f5", null ],
-    [ "extI2C", "group___s_h_t40.html#ga4c20ba2e81b46c1ad170bac078c04246", null ],
+    [ "extI2C", "group___s_h_t40.html#ga61499c138172104fcdac9612f6e09e45", null ],
     [ "SHT40_meas_t", "group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2", null ],
-    [ "SHT40_unit_t", "group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c", null ]
+    [ "SHT40_unit_t", "group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c", [
+      [ "SHT40_UNIT_C", "group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99ca42002bfdc377e7ba21bc738149b1834b", null ],
+      [ "SHT40_UNIT_F", "group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99cac24ab6df15b1fed58a9a691438e95e6e", null ]
+    ] ]
 ];
