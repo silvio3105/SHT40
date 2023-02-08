@@ -1,6 +1,6 @@
 <map id="SHT40.cpp" name="SHT40.cpp">
-<area shape="rect" id="node1" title="SHT40 C++ file." alt="" coords="45,5,132,31"/>
-<area shape="rect" id="node2" href="$_s_h_t40_8h.html" title="Header file for SHT40 driver." alt="" coords="5,79,79,104"/>
+<area shape="rect" id="node1" title="SHT40 driver translation unit file." alt="" coords="45,5,132,31"/>
+<area shape="rect" id="node2" href="$_s_h_t40_8h.html" title="SHT40 driver header file." alt="" coords="5,79,79,104"/>
 <area shape="rect" id="node4" title=" " alt="" coords="103,79,168,104"/>
 <area shape="rect" id="node3" title=" " alt="" coords="9,152,75,177"/>
 </map>

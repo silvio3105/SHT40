@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['i2cread_0',['I2CRead',['../class_s_h_t40.html#a9a2a900e107bcc4f99e3d0301c7900aa',1,'SHT40']]],
-  ['i2cwrite_1',['I2CWrite',['../class_s_h_t40.html#a82544bc4a4700d9298133a64cef82d7c',1,'SHT40']]]
+  ['header_0',['header',['../class_s_h_t40.html#a40a8e2b514a16b94fcf2f040bb67da6a',1,'SHT40']]]
 ];

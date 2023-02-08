@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">SHT40<span id="projectnumber">&#160;v1.0r1</span>
+   <div id="projectname">SHT40<span id="projectnumber">&#160;v1.0r2</span>
    </div>
    <div id="projectbrief">Frameworkless I2C driver for SHT40 sensor written in C++.</div>
   </td>
@@ -97,17 +97,17 @@ $(document).ready(function(){initNavTree('_s_h_t40_8cpp.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> C++ file.  
+<p><a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> driver translation unit file.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>&quot;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for SHT40.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_s_h_t40_8cpp__incl.png" border="0" usemap="#a_s_h_t40_8cpp" alt=""/></div>
 <map name="a_s_h_t40_8cpp" id="a_s_h_t40_8cpp">
-<area shape="rect" title="SHT40 C++ file." alt="" coords="45,5,132,31"/>
-<area shape="rect" href="_s_h_t40_8h.html" title="Header file for SHT40 driver." alt="" coords="5,79,79,104"/>
+<area shape="rect" title="SHT40 driver translation unit file." alt="" coords="45,5,132,31"/>
+<area shape="rect" href="_s_h_t40_8h.html" title="SHT40 driver header file." alt="" coords="5,79,79,104"/>
 <area shape="rect" title=" " alt="" coords="103,79,168,104"/>
 <area shape="rect" title=" " alt="" coords="9,152,75,177"/>
 </map>
@@ -117,19 +117,19 @@ Include dependency graph for SHT40.cpp:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a758dc50c962089fd445a7894899577fe"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8cpp.html#a758dc50c962089fd445a7894899577fe">getDelay</a> (<a class="el" href="group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2">SHT40_meas_t</a> type)</td></tr>
-<tr class="memdesc:a758dc50c962089fd445a7894899577fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get required delay for measurement type.  <a href="_s_h_t40_8cpp.html#a758dc50c962089fd445a7894899577fe">More...</a><br /></td></tr>
-<tr class="separator:a758dc50c962089fd445a7894899577fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33c7367153e332ea0a70ce60f433fbd"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8cpp.html#af33c7367153e332ea0a70ce60f433fbd">getMeasureDelay</a> (<a class="el" href="group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2">SHT40_meas_t</a> type)</td></tr>
+<tr class="memdesc:af33c7367153e332ea0a70ce60f433fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get required delay for measurement type.  <a href="_s_h_t40_8cpp.html#af33c7367153e332ea0a70ce60f433fbd">More...</a><br /></td></tr>
+<tr class="separator:af33c7367153e332ea0a70ce60f433fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p ><a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> C++ file. </p>
+<div class="textblock"><p ><a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> driver translation unit file. </p>
 <dl class="section author"><dt>Author</dt><dd>silvio3105 (www.github.com/silvio3105) </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>silvio3105 (c) 2022 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022, silvio3105 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a758dc50c962089fd445a7894899577fe" name="a758dc50c962089fd445a7894899577fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a758dc50c962089fd445a7894899577fe">&#9670;&#160;</a></span>getDelay()</h2>
+<a id="af33c7367153e332ea0a70ce60f433fbd" name="af33c7367153e332ea0a70ce60f433fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af33c7367153e332ea0a70ce60f433fbd">&#9670;&#160;</a></span>getMeasureDelay()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,7 +138,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static uint16_t getDelay </td>
+          <td class="memname">static uint16_t getMeasureDelay </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2">SHT40_meas_t</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -161,14 +161,14 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Required delay in ms. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00178">178</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00193">193</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="_s_h_t40_8cpp_a758dc50c962089fd445a7894899577fe_icgraph.png" border="0" usemap="#a_s_h_t40_8cpp_a758dc50c962089fd445a7894899577fe_icgraph" alt=""/></div>
-<map name="a_s_h_t40_8cpp_a758dc50c962089fd445a7894899577fe_icgraph" id="a_s_h_t40_8cpp_a758dc50c962089fd445a7894899577fe_icgraph">
-<area shape="rect" title="Get required delay for measurement type." alt="" coords="173,5,247,31"/>
-<area shape="rect" href="class_s_h_t40.html#ac5e9c9f2409dc9c1b73986126a433ef6" title="Measures temerature and RH." alt="" coords="5,5,125,31"/>
+<div class="center"><img src="_s_h_t40_8cpp_af33c7367153e332ea0a70ce60f433fbd_icgraph.png" border="0" usemap="#a_s_h_t40_8cpp_af33c7367153e332ea0a70ce60f433fbd_icgraph" alt=""/></div>
+<map name="a_s_h_t40_8cpp_af33c7367153e332ea0a70ce60f433fbd_icgraph" id="a_s_h_t40_8cpp_af33c7367153e332ea0a70ce60f433fbd_icgraph">
+<area shape="rect" title="Get required delay for measurement type." alt="" coords="173,5,296,31"/>
+<area shape="rect" href="class_s_h_t40.html#ac5e9c9f2409dc9c1b73986126a433ef6" title="Measure temerature and RH." alt="" coords="5,5,125,31"/>
 </map>
 </div>
 
@@ -180,7 +180,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="_s_h_t40_8cpp.html">SHT40.cpp</a></li>
-    <li class="footer">Generated on Wed Dec 28 2022 21:17:52 for SHT40 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Wed Feb 8 2023 19:28:41 for SHT40 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

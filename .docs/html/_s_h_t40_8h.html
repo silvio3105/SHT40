@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">SHT40<span id="projectnumber">&#160;v1.0r1</span>
+   <div id="projectname">SHT40<span id="projectnumber">&#160;v1.0r2</span>
    </div>
    <div id="projectbrief">Frameworkless I2C driver for SHT40 sensor written in C++.</div>
   </td>
@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('_s_h_t40_8h.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for <a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> driver.  
+<p><a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> driver header file.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -109,7 +109,7 @@ Include dependency graph for SHT40.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_s_h_t40_8h__incl.png" border="0" usemap="#a_s_h_t40_8h" alt=""/></div>
 <map name="a_s_h_t40_8h" id="a_s_h_t40_8h">
-<area shape="rect" title="Header file for SHT40 driver." alt="" coords="5,5,79,31"/>
+<area shape="rect" title="SHT40 driver header file." alt="" coords="5,5,79,31"/>
 <area shape="rect" title=" " alt="" coords="9,79,75,104"/>
 </map>
 </div>
@@ -118,8 +118,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_s_h_t40_8h__dep__incl.png" border="0" usemap="#a_s_h_t40_8hdep" alt=""/></div>
 <map name="a_s_h_t40_8hdep" id="a_s_h_t40_8hdep">
-<area shape="rect" title="Header file for SHT40 driver." alt="" coords="12,5,85,31"/>
-<area shape="rect" href="_s_h_t40_8cpp.html" title="SHT40 C++ file." alt="" coords="5,79,92,104"/>
+<area shape="rect" title="SHT40 driver header file." alt="" coords="12,5,85,31"/>
+<area shape="rect" href="_s_h_t40_8cpp.html" title="SHT40 driver translation unit file." alt="" coords="5,79,92,104"/>
 </map>
 </div>
 </div>
@@ -128,14 +128,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html">SHT40</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> Class.  <a href="class_s_h_t40.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> sensor class.  <a href="class_s_h_t40.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga455685d8332748805aa4b2276e9e0e6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga455685d8332748805aa4b2276e9e0e6c">SHT40_NAK</a>&#160;&#160;&#160;(0x15)</td></tr>
-<tr class="memdesc:ga455685d8332748805aa4b2276e9e0e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">NAK symbol.  <a href="group___s_h_t40.html#ga455685d8332748805aa4b2276e9e0e6c">More...</a><br /></td></tr>
-<tr class="separator:ga455685d8332748805aa4b2276e9e0e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6a12dcc59118c49840e8d34934c5b27b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga6a12dcc59118c49840e8d34934c5b27b">SHT40_NOK</a>&#160;&#160;&#160;(0x00)</td></tr>
 <tr class="memdesc:ga6a12dcc59118c49840e8d34934c5b27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value representing negative OK status.  <a href="group___s_h_t40.html#ga6a12dcc59118c49840e8d34934c5b27b">More...</a><br /></td></tr>
 <tr class="separator:ga6a12dcc59118c49840e8d34934c5b27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,6 +145,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga88bc989eef427f900354602e91da463d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga88bc989eef427f900354602e91da463d">SHT40_I2CH_W</a>&#160;&#160;&#160;(0x03)</td></tr>
 <tr class="memdesc:ga88bc989eef427f900354602e91da463d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value representing missing write I2C handler.  <a href="group___s_h_t40.html#ga88bc989eef427f900354602e91da463d">More...</a><br /></td></tr>
 <tr class="separator:ga88bc989eef427f900354602e91da463d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2f41fa09c651bc153f8aceaf486be44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#gaa2f41fa09c651bc153f8aceaf486be44">SHT40_OLD_DATA</a>&#160;&#160;&#160;(0x04)</td></tr>
+<tr class="memdesc:gaa2f41fa09c651bc153f8aceaf486be44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return code returned when old data are used for temperature or humidity calculations.  <a href="group___s_h_t40.html#gaa2f41fa09c651bc153f8aceaf486be44">More...</a><br /></td></tr>
+<tr class="separator:gaa2f41fa09c651bc153f8aceaf486be44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga455685d8332748805aa4b2276e9e0e6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga455685d8332748805aa4b2276e9e0e6c">SHT40_NAK</a>&#160;&#160;&#160;(0x15)</td></tr>
+<tr class="memdesc:ga455685d8332748805aa4b2276e9e0e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">NAK symbol.  <a href="group___s_h_t40.html#ga455685d8332748805aa4b2276e9e0e6c">More...</a><br /></td></tr>
+<tr class="separator:ga455685d8332748805aa4b2276e9e0e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3fef204f2a54bd4d76c8c0e8aad00b33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga3fef204f2a54bd4d76c8c0e8aad00b33">I2C_ADDR_SHT40_AD</a>&#160;&#160;&#160;(0x44)</td></tr>
 <tr class="memdesc:ga3fef204f2a54bd4d76c8c0e8aad00b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C address for SHT40-AD.  <a href="group___s_h_t40.html#ga3fef204f2a54bd4d76c8c0e8aad00b33">More...</a><br /></td></tr>
 <tr class="separator:ga3fef204f2a54bd4d76c8c0e8aad00b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,41 +158,32 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga908ac8b13afcdbe23da9b58684fb6d97"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C address for SHT40-B.  <a href="group___s_h_t40.html#ga908ac8b13afcdbe23da9b58684fb6d97">More...</a><br /></td></tr>
 <tr class="separator:ga908ac8b13afcdbe23da9b58684fb6d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac45ac567f29db98fb46b00a8bfc6b809"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#gac45ac567f29db98fb46b00a8bfc6b809">SHT40_I2C_DEF_ADDR</a>&#160;&#160;&#160;<a class="el" href="group___s_h_t40.html#ga3fef204f2a54bd4d76c8c0e8aad00b33">I2C_ADDR_SHT40_AD</a></td></tr>
-<tr class="memdesc:gac45ac567f29db98fb46b00a8bfc6b809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> I2C address.  <a href="group___s_h_t40.html#gac45ac567f29db98fb46b00a8bfc6b809">More...</a><br /></td></tr>
+<tr class="memdesc:gac45ac567f29db98fb46b00a8bfc6b809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> I2C address.  <a href="group___s_h_t40.html#gac45ac567f29db98fb46b00a8bfc6b809">More...</a><br /></td></tr>
 <tr class="separator:gac45ac567f29db98fb46b00a8bfc6b809"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaee97d7c670a0cfaa93d4cb620eb850e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#gaee97d7c670a0cfaa93d4cb620eb850e5">SHT40_M_TRH_HP</a>&#160;&#160;&#160;(0xFD)</td></tr>
-<tr class="memdesc:gaee97d7c670a0cfaa93d4cb620eb850e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command for High precision temperature &amp; RH measurement without heater.  <a href="group___s_h_t40.html#gaee97d7c670a0cfaa93d4cb620eb850e5">More...</a><br /></td></tr>
-<tr class="separator:gaee97d7c670a0cfaa93d4cb620eb850e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga785d204f76e784cfccfb3e75e35c4c6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga785d204f76e784cfccfb3e75e35c4c6c">SHT40_M_TRH_MP</a>&#160;&#160;&#160;(0xF6)</td></tr>
-<tr class="memdesc:ga785d204f76e784cfccfb3e75e35c4c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command for Medium precision temperature &amp; RH measurement without heater.  <a href="group___s_h_t40.html#ga785d204f76e784cfccfb3e75e35c4c6c">More...</a><br /></td></tr>
-<tr class="separator:ga785d204f76e784cfccfb3e75e35c4c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad7275b0bebbd2c7d88e8e7b64f1838e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#gad7275b0bebbd2c7d88e8e7b64f1838e5">SHT40_M_TRH_LP</a>&#160;&#160;&#160;(0xE0)</td></tr>
-<tr class="memdesc:gad7275b0bebbd2c7d88e8e7b64f1838e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command for Low precision temperature &amp; RH measurement without heater.  <a href="group___s_h_t40.html#gad7275b0bebbd2c7d88e8e7b64f1838e5">More...</a><br /></td></tr>
-<tr class="separator:gad7275b0bebbd2c7d88e8e7b64f1838e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga81dcaa262af4779ec911727efcaa607a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga81dcaa262af4779ec911727efcaa607a">SHT40_SN</a>&#160;&#160;&#160;(0x89)</td></tr>
 <tr class="memdesc:ga81dcaa262af4779ec911727efcaa607a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command for Serial number.  <a href="group___s_h_t40.html#ga81dcaa262af4779ec911727efcaa607a">More...</a><br /></td></tr>
 <tr class="separator:ga81dcaa262af4779ec911727efcaa607a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4f7183d9a9d0ae193e068118ea28a6f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga4f7183d9a9d0ae193e068118ea28a6f0">SHT40_RST</a>&#160;&#160;&#160;(0x94)</td></tr>
 <tr class="memdesc:ga4f7183d9a9d0ae193e068118ea28a6f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command for Soft reset.  <a href="group___s_h_t40.html#ga4f7183d9a9d0ae193e068118ea28a6f0">More...</a><br /></td></tr>
 <tr class="separator:ga4f7183d9a9d0ae193e068118ea28a6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf1d781a1ba789d150c28a340fadd28f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#gaf1d781a1ba789d150c28a340fadd28f5">SHT40_TRH_H_H02W1S</a>&#160;&#160;&#160;(0x39)</td></tr>
-<tr class="memdesc:gaf1d781a1ba789d150c28a340fadd28f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command for High precision temperature &amp; RH measurement with 0.2W heater 1s.  <a href="group___s_h_t40.html#gaf1d781a1ba789d150c28a340fadd28f5">More...</a><br /></td></tr>
-<tr class="separator:gaf1d781a1ba789d150c28a340fadd28f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga43c05a8313dfa7896fd1701ae8cec70e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga43c05a8313dfa7896fd1701ae8cec70e">SHT40_TRH_H_H02W01S</a>&#160;&#160;&#160;(0x32)</td></tr>
-<tr class="memdesc:ga43c05a8313dfa7896fd1701ae8cec70e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command for High precision temperature &amp; RH measurement with 0.2W heater 0.1s.  <a href="group___s_h_t40.html#ga43c05a8313dfa7896fd1701ae8cec70e">More...</a><br /></td></tr>
-<tr class="separator:ga43c05a8313dfa7896fd1701ae8cec70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad67c440b07df8820bea5bd2bb56ab3e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#gad67c440b07df8820bea5bd2bb56ab3e1">SHT40_TRH_H_H011W1S</a>&#160;&#160;&#160;(0x2F)</td></tr>
-<tr class="memdesc:gad67c440b07df8820bea5bd2bb56ab3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command for High precision temperature &amp; RH measurement with 0.1W heater 1s.  <a href="group___s_h_t40.html#gad67c440b07df8820bea5bd2bb56ab3e1">More...</a><br /></td></tr>
-<tr class="separator:gad67c440b07df8820bea5bd2bb56ab3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab371f109477ec494d253a35bb6bbb824"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#gab371f109477ec494d253a35bb6bbb824">SHT40_TRH_H_H011W01S</a>&#160;&#160;&#160;(0x24)</td></tr>
-<tr class="memdesc:gab371f109477ec494d253a35bb6bbb824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command for High precision temperature &amp; RH measurement with 0.1W heater 0.1s.  <a href="group___s_h_t40.html#gab371f109477ec494d253a35bb6bbb824">More...</a><br /></td></tr>
-<tr class="separator:gab371f109477ec494d253a35bb6bbb824"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6fc46356c6aae5fcf6058adbf8ad93e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga6fc46356c6aae5fcf6058adbf8ad93e0">SHT40_TRH_H_H002W1S</a>&#160;&#160;&#160;(0x1E)</td></tr>
-<tr class="memdesc:ga6fc46356c6aae5fcf6058adbf8ad93e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command for High precision temperature &amp; RH measurement with 0.02W heater 1s.  <a href="group___s_h_t40.html#ga6fc46356c6aae5fcf6058adbf8ad93e0">More...</a><br /></td></tr>
-<tr class="separator:ga6fc46356c6aae5fcf6058adbf8ad93e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4616325c85d60a0ac487009c3a750eec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga4616325c85d60a0ac487009c3a750eec">SHT40_TRH_H_H002W01S</a>&#160;&#160;&#160;(0x15)</td></tr>
-<tr class="memdesc:ga4616325c85d60a0ac487009c3a750eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command for High precision temperature &amp; RH measurement with 0.02W heater 0.1s.  <a href="group___s_h_t40.html#ga4616325c85d60a0ac487009c3a750eec">More...</a><br /></td></tr>
-<tr class="separator:ga4616325c85d60a0ac487009c3a750eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga634978ea88fb958d151f4814cc926699"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga634978ea88fb958d151f4814cc926699">SHT40_UNIT_POS</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga634978ea88fb958d151f4814cc926699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga907dd6be81e087dc388bd21917debb1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga907dd6be81e087dc388bd21917debb1c">SHT40_UNIT_MASK</a>&#160;&#160;&#160;0b00000001</td></tr>
+<tr class="separator:ga907dd6be81e087dc388bd21917debb1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c0c479d9a1f19a359b3de44f55d766d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga1c0c479d9a1f19a359b3de44f55d766d">SHT40_UNIT</a>&#160;&#160;&#160;(1 &lt;&lt; SHT40_UNIT_POS)</td></tr>
+<tr class="separator:ga1c0c479d9a1f19a359b3de44f55d766d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0729ab57039883063c75f7f2b7c2cd7e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga0729ab57039883063c75f7f2b7c2cd7e">SHT40_OLD_TEMP_POS</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga0729ab57039883063c75f7f2b7c2cd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab89692de4195c7acb6cfbee7ed69461f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#gab89692de4195c7acb6cfbee7ed69461f">SHT40_OLD_TEMP_MASK</a>&#160;&#160;&#160;0b00000010</td></tr>
+<tr class="separator:gab89692de4195c7acb6cfbee7ed69461f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1851c5a25cad76cffbf3786b277cb7b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga1851c5a25cad76cffbf3786b277cb7b7">SHT40_OLD_TEMP</a>&#160;&#160;&#160;(1 &lt;&lt; SHT40_OLD_TEMP_POS)</td></tr>
+<tr class="separator:ga1851c5a25cad76cffbf3786b277cb7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacfa39c4219e81c5c74e2e03103210d50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#gacfa39c4219e81c5c74e2e03103210d50">SHT40_OLD_RH_POS</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:gacfa39c4219e81c5c74e2e03103210d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga818b210619dbc34544f70a7de4881503"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga818b210619dbc34544f70a7de4881503">SHT40_OLD_RH_MASK</a>&#160;&#160;&#160;0b00000100</td></tr>
+<tr class="separator:ga818b210619dbc34544f70a7de4881503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c9eda4ee85b2838b8a9269a52b19151"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga6c9eda4ee85b2838b8a9269a52b19151">SHT40_OLD_RH</a>&#160;&#160;&#160;(1 &lt;&lt; SHT40_OLD_RH_POS)</td></tr>
+<tr class="separator:ga6c9eda4ee85b2838b8a9269a52b19151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -200,35 +194,35 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:gad34c3eaa3b107949fa7c888815293ad2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2">SHT40_meas_t</a> : uint8_t { <br />
-&#160;&#160;<b>TRH_H</b> = SHT40_M_TRH_HP
-, <b>TRH_M</b> = SHT40_M_TRH_MP
-, <b>TRH_L</b> = SHT40_M_TRH_LP
-, <b>TRH_H_H02W1S</b> = SHT40_TRH_H_H02W1S
+&#160;&#160;<a class="el" href="group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2afe11220754c90b49efe332b787297258">TRH_H</a> = 0xFD
+, <a class="el" href="group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2a655ecca862cc97b12b5fcecffe437b58">TRH_M</a> = 0xF6
+, <a class="el" href="group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2a102cfc38940e8fd21b9c330a8a4761b7">TRH_L</a> = 0xE0
+, <a class="el" href="group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2aca3d0d8a66f1257fc914c01a663b83c7">TRH_H_H02W1S</a> = 0x39
 , <br />
-&#160;&#160;<b>TRH_H_H02W01S</b> = SHT40_TRH_H_H02W01S
-, <b>TRH_H_H011W1S</b> = SHT40_TRH_H_H011W1S
-, <b>TRH_H_H011W01S</b> = SHT40_TRH_H_H011W01S
-, <b>TRH_H_H002W1S</b> = SHT40_TRH_H_H002W1S
+&#160;&#160;<a class="el" href="group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2aded0fe95a1bd4714518d193637474a1f">TRH_H_H02W01S</a> = 0x32
+, <a class="el" href="group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2ad046bd8fd81b79084e612787666389ed">TRH_H_H011W1S</a> = 0x2F
+, <a class="el" href="group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2a72c4163920aa8869f4388aa11e63a3f3">TRH_H_H011W01S</a> = 0x24
+, <a class="el" href="group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2aa0216949bc7e701ba60f7760117d5776">TRH_H_H002W1S</a> = 0x1E
 , <br />
-&#160;&#160;<b>TRH_H_H002W01S</b> = SHT40_TRH_H_H002W01S
+&#160;&#160;<a class="el" href="group___s_h_t40.html#ggad34c3eaa3b107949fa7c888815293ad2a34bcb599f3541c9a40b57c2897564fd9">TRH_H_H002W01S</a> = 0x15
 <br />
  }</td></tr>
 <tr class="memdesc:gad34c3eaa3b107949fa7c888815293ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measurement types.  <a href="group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2">More...</a><br /></td></tr>
 <tr class="separator:gad34c3eaa3b107949fa7c888815293ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga471b19e253a7d6ef9d8b7f58719fd99c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> : uint8_t { <a class="el" href="group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99ca42002bfdc377e7ba21bc738149b1834b">SHT40_UNIT_C</a>
-, <a class="el" href="group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99cac24ab6df15b1fed58a9a691438e95e6e">SHT40_UNIT_F</a>
+<tr class="memitem:ga471b19e253a7d6ef9d8b7f58719fd99c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> : uint8_t { <a class="el" href="group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99ca42002bfdc377e7ba21bc738149b1834b">SHT40_UNIT_C</a> = (0 &lt;&lt; SHT40_UNIT_POS)
+, <a class="el" href="group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99cac24ab6df15b1fed58a9a691438e95e6e">SHT40_UNIT_F</a> = (1 &lt;&lt; SHT40_UNIT_POS)
  }</td></tr>
 <tr class="memdesc:ga471b19e253a7d6ef9d8b7f58719fd99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temperature units.  <a href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">More...</a><br /></td></tr>
 <tr class="separator:ga471b19e253a7d6ef9d8b7f58719fd99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a6967778aece542cca178e9f470da6841"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#a6967778aece542cca178e9f470da6841">sn2</a> [2]</td></tr>
-<tr class="separator:a6967778aece542cca178e9f470da6841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a331ee261e069f61352db58f8696f2b0c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#a331ee261e069f61352db58f8696f2b0c">sn2</a></td></tr>
+<tr class="separator:a331ee261e069f61352db58f8696f2b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49240eec60511697d33a195f2b7e0955"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#a49240eec60511697d33a195f2b7e0955">crc2</a></td></tr>
 <tr class="separator:a49240eec60511697d33a195f2b7e0955"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa9534c467f52f3fbd02ee726a4faab1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#aaa9534c467f52f3fbd02ee726a4faab1">sn1</a> [2]</td></tr>
-<tr class="separator:aaa9534c467f52f3fbd02ee726a4faab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d86986c915520a1d14ec713470e9c48"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#a9d86986c915520a1d14ec713470e9c48">sn1</a></td></tr>
+<tr class="separator:a9d86986c915520a1d14ec713470e9c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fe0b456274bc1c44577429ccf02525b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#a2fe0b456274bc1c44577429ccf02525b">crc1</a></td></tr>
 <tr class="separator:a2fe0b456274bc1c44577429ccf02525b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd7dfee84961229a52ee6c63571ccda1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_h_t40_8h.html#abd7dfee84961229a52ee6c63571ccda1">temp</a> [2]</td></tr>
@@ -237,9 +231,9 @@ Variables</h2></td></tr>
 <tr class="separator:a27bedc2f2ec69c29f1586311e426f830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Header file for <a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> driver. </p>
+<div class="textblock"><p ><a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> driver header file. </p>
 <dl class="section author"><dt>Author</dt><dd>silvio3105 (www.github.com/silvio3105) </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>silvio3105 (c) 2022 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022, silvio3105 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 </div><h2 class="groupheader">Variable Documentation</h2>
@@ -291,14 +285,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aaa9534c467f52f3fbd02ee726a4faab1" name="aaa9534c467f52f3fbd02ee726a4faab1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa9534c467f52f3fbd02ee726a4faab1">&#9670;&#160;</a></span>sn1</h2>
+<a id="a9d86986c915520a1d14ec713470e9c48" name="a9d86986c915520a1d14ec713470e9c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d86986c915520a1d14ec713470e9c48">&#9670;&#160;</a></span>sn1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t sn1[2]</td>
+          <td class="memname">uint16_t sn1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -307,14 +301,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6967778aece542cca178e9f470da6841" name="a6967778aece542cca178e9f470da6841"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6967778aece542cca178e9f470da6841">&#9670;&#160;</a></span>sn2</h2>
+<a id="a331ee261e069f61352db58f8696f2b0c" name="a331ee261e069f61352db58f8696f2b0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331ee261e069f61352db58f8696f2b0c">&#9670;&#160;</a></span>sn2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t sn2[2]</td>
+          <td class="memname">uint16_t sn2</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -345,7 +339,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="_s_h_t40_8h.html">SHT40.h</a></li>
-    <li class="footer">Generated on Wed Dec 28 2022 21:17:52 for SHT40 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Wed Feb 8 2023 19:28:41 for SHT40 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

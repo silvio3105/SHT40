@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">SHT40<span id="projectnumber">&#160;v1.0r1</span>
+   <div id="projectname">SHT40<span id="projectnumber">&#160;v1.0r2</span>
    </div>
    <div id="projectbrief">Frameworkless I2C driver for SHT40 sensor written in C++.</div>
   </td>
@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('class_s_h_t40.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> Class.  
+<p><a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> sensor class.  
  <a href="class_s_h_t40.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>&gt;</code></p>
@@ -107,38 +107,38 @@ $(document).ready(function(){initNavTree('class_s_h_t40.html',''); initResizable
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac0b628518b7080ed4960255091814956"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#ac0b628518b7080ed4960255091814956">SHT40</a> (uint8_t addr, <a class="el" href="group___s_h_t40.html#ga61499c138172104fcdac9612f6e09e45">extI2C</a> i2cr, <a class="el" href="group___s_h_t40.html#ga61499c138172104fcdac9612f6e09e45">extI2C</a> i2cw)</td></tr>
-<tr class="memdesc:ac0b628518b7080ed4960255091814956"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> object constructor.  <a href="class_s_h_t40.html#ac0b628518b7080ed4960255091814956">More...</a><br /></td></tr>
+<tr class="memdesc:ac0b628518b7080ed4960255091814956"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> object constructor.  <a href="class_s_h_t40.html#ac0b628518b7080ed4960255091814956">More...</a><br /></td></tr>
 <tr class="separator:ac0b628518b7080ed4960255091814956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae74f4b03548e0906ef04903b584da1d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#ae74f4b03548e0906ef04903b584da1d0">~SHT40</a> (void)</td></tr>
-<tr class="memdesc:ae74f4b03548e0906ef04903b584da1d0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> object deconstructor.  <a href="class_s_h_t40.html#ae74f4b03548e0906ef04903b584da1d0">More...</a><br /></td></tr>
+<tr class="memdesc:ae74f4b03548e0906ef04903b584da1d0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> object deconstructor.  <a href="class_s_h_t40.html#ae74f4b03548e0906ef04903b584da1d0">More...</a><br /></td></tr>
 <tr class="separator:ae74f4b03548e0906ef04903b584da1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5e9c9f2409dc9c1b73986126a433ef6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#ac5e9c9f2409dc9c1b73986126a433ef6">measure</a> (<a class="el" href="group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2">SHT40_meas_t</a> type)</td></tr>
-<tr class="memdesc:ac5e9c9f2409dc9c1b73986126a433ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures temerature and RH.  <a href="class_s_h_t40.html#ac5e9c9f2409dc9c1b73986126a433ef6">More...</a><br /></td></tr>
+<tr class="memdesc:ac5e9c9f2409dc9c1b73986126a433ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure temerature and RH.  <a href="class_s_h_t40.html#ac5e9c9f2409dc9c1b73986126a433ef6">More...</a><br /></td></tr>
 <tr class="separator:ac5e9c9f2409dc9c1b73986126a433ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54816665197165bfc23b2153bf4ca8a7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#a54816665197165bfc23b2153bf4ca8a7">temperature</a> (int16_t &amp;out)</td></tr>
-<tr class="memdesc:a54816665197165bfc23b2153bf4ca8a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates temperature from last measure call.  <a href="class_s_h_t40.html#a54816665197165bfc23b2153bf4ca8a7">More...</a><br /></td></tr>
-<tr class="separator:a54816665197165bfc23b2153bf4ca8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239b3c4d8391dc6b30953c66b4d299be"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#a239b3c4d8391dc6b30953c66b4d299be">temperature</a> (int8_t &amp;out)</td></tr>
+<tr class="memdesc:a239b3c4d8391dc6b30953c66b4d299be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate temperature using data from <a class="el" href="class_s_h_t40.html#ac5e9c9f2409dc9c1b73986126a433ef6">measure</a> method.  <a href="class_s_h_t40.html#a239b3c4d8391dc6b30953c66b4d299be">More...</a><br /></td></tr>
+<tr class="separator:a239b3c4d8391dc6b30953c66b4d299be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bfa6e924bab26d3556d6783f83ae273"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#a9bfa6e924bab26d3556d6783f83ae273">rh</a> (uint8_t &amp;out)</td></tr>
-<tr class="memdesc:a9bfa6e924bab26d3556d6783f83ae273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates RH from last measure call.  <a href="class_s_h_t40.html#a9bfa6e924bab26d3556d6783f83ae273">More...</a><br /></td></tr>
+<tr class="memdesc:a9bfa6e924bab26d3556d6783f83ae273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate RH using data from <a class="el" href="class_s_h_t40.html#ac5e9c9f2409dc9c1b73986126a433ef6">measure</a> method.  <a href="class_s_h_t40.html#a9bfa6e924bab26d3556d6783f83ae273">More...</a><br /></td></tr>
 <tr class="separator:a9bfa6e924bab26d3556d6783f83ae273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d7de0ee5ac74c48ebdb7d0a558e9fad"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#a8d7de0ee5ac74c48ebdb7d0a558e9fad">whoAmI</a> (void)</td></tr>
-<tr class="memdesc:a8d7de0ee5ac74c48ebdb7d0a558e9fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads unique serial number.  <a href="class_s_h_t40.html#a8d7de0ee5ac74c48ebdb7d0a558e9fad">More...</a><br /></td></tr>
+<tr class="memdesc:a8d7de0ee5ac74c48ebdb7d0a558e9fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read unique serial number.  <a href="class_s_h_t40.html#a8d7de0ee5ac74c48ebdb7d0a558e9fad">More...</a><br /></td></tr>
 <tr class="separator:a8d7de0ee5ac74c48ebdb7d0a558e9fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85c70255c3236f69db61909072648285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#a85c70255c3236f69db61909072648285">reset</a> (void) const</td></tr>
-<tr class="memdesc:a85c70255c3236f69db61909072648285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to reset the chip.  <a href="class_s_h_t40.html#a85c70255c3236f69db61909072648285">More...</a><br /></td></tr>
+<tr class="memdesc:a85c70255c3236f69db61909072648285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the chip.  <a href="class_s_h_t40.html#a85c70255c3236f69db61909072648285">More...</a><br /></td></tr>
 <tr class="separator:a85c70255c3236f69db61909072648285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c44b45430aa66546d853ca517b1eb8f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#a7c44b45430aa66546d853ca517b1eb8f">init</a> (<a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> u)</td></tr>
-<tr class="memdesc:a7c44b45430aa66546d853ca517b1eb8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize <a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> object.  <a href="class_s_h_t40.html#a7c44b45430aa66546d853ca517b1eb8f">More...</a><br /></td></tr>
+<tr class="memdesc:a7c44b45430aa66546d853ca517b1eb8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize <a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> object.  <a href="class_s_h_t40.html#a7c44b45430aa66546d853ca517b1eb8f">More...</a><br /></td></tr>
 <tr class="separator:a7c44b45430aa66546d853ca517b1eb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88b01bafce3ff94d80db39b506174504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#a88b01bafce3ff94d80db39b506174504">clear</a> (void)</td></tr>
-<tr class="memdesc:a88b01bafce3ff94d80db39b506174504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear measured data.  <a href="class_s_h_t40.html#a88b01bafce3ff94d80db39b506174504">More...</a><br /></td></tr>
-<tr class="separator:a88b01bafce3ff94d80db39b506174504"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a845a86373be69ec11e57bb4af74ff914"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#a845a86373be69ec11e57bb4af74ff914">setUnit</a> (<a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> u)</td></tr>
-<tr class="memdesc:a845a86373be69ec11e57bb4af74ff914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets temperature unit.  <a href="class_s_h_t40.html#a845a86373be69ec11e57bb4af74ff914">More...</a><br /></td></tr>
-<tr class="separator:a845a86373be69ec11e57bb4af74ff914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb84e6ece2b0e5f99b3d1fc176243f52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#acb84e6ece2b0e5f99b3d1fc176243f52">setUnit</a> (<a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> unit)</td></tr>
+<tr class="memdesc:acb84e6ece2b0e5f99b3d1fc176243f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set temperature unit.  <a href="class_s_h_t40.html#acb84e6ece2b0e5f99b3d1fc176243f52">More...</a><br /></td></tr>
+<tr class="separator:acb84e6ece2b0e5f99b3d1fc176243f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabc3e928e94a31e8c8cb2a9757ae9452"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#aabc3e928e94a31e8c8cb2a9757ae9452">getUnit</a> (void) const</td></tr>
 <tr class="memdesc:aabc3e928e94a31e8c8cb2a9757ae9452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get temperature unit.  <a href="class_s_h_t40.html#aabc3e928e94a31e8c8cb2a9757ae9452">More...</a><br /></td></tr>
 <tr class="separator:aabc3e928e94a31e8c8cb2a9757ae9452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b01bafce3ff94d80db39b506174504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#a88b01bafce3ff94d80db39b506174504">clear</a> (void)</td></tr>
+<tr class="memdesc:a88b01bafce3ff94d80db39b506174504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear measured data.  <a href="class_s_h_t40.html#a88b01bafce3ff94d80db39b506174504">More...</a><br /></td></tr>
+<tr class="separator:a88b01bafce3ff94d80db39b506174504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -147,7 +147,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a3f70d09560fb1273016ec6ed868ce902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header for NACK/NAK is sensor is busy.  <a href="class_s_h_t40.html#a40a8e2b514a16b94fcf2f040bb67da6a">More...</a><br /></td></tr>
 <tr class="separator:a3f70d09560fb1273016ec6ed868ce902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89315f82d5fcd3b437898557655317aa"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:a89315f82d5fcd3b437898557655317aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Union of <a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> data.  <a href="class_s_h_t40.html#a89315f82d5fcd3b437898557655317aa">More...</a><br /></td></tr>
+<tr class="memdesc:a89315f82d5fcd3b437898557655317aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Union of <a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> data.  <a href="class_s_h_t40.html#a89315f82d5fcd3b437898557655317aa">More...</a><br /></td></tr>
 <tr class="separator:a89315f82d5fcd3b437898557655317aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac60694673a568d76ff509917b8c9515f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#ac60694673a568d76ff509917b8c9515f">address</a> = <a class="el" href="group___s_h_t40.html#gac45ac567f29db98fb46b00a8bfc6b809">SHT40_I2C_DEF_ADDR</a></td></tr>
 <tr class="memdesc:ac60694673a568d76ff509917b8c9515f"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C slave device address.  <a href="class_s_h_t40.html#ac60694673a568d76ff509917b8c9515f">More...</a><br /></td></tr>
@@ -158,14 +158,14 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a82544bc4a4700d9298133a64cef82d7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_h_t40.html#ga61499c138172104fcdac9612f6e09e45">extI2C</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#a82544bc4a4700d9298133a64cef82d7c">I2CWrite</a> = nullptr</td></tr>
 <tr class="memdesc:a82544bc4a4700d9298133a64cef82d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to external I2C write function.  <a href="class_s_h_t40.html#a82544bc4a4700d9298133a64cef82d7c">More...</a><br /></td></tr>
 <tr class="separator:a82544bc4a4700d9298133a64cef82d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8d17944c1304187950aad9e8a558c52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#af8d17944c1304187950aad9e8a558c52">unit</a> = <a class="el" href="group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99ca42002bfdc377e7ba21bc738149b1834b">SHT40_UNIT_C</a></td></tr>
-<tr class="memdesc:af8d17944c1304187950aad9e8a558c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temperature unit variable.  <a href="class_s_h_t40.html#af8d17944c1304187950aad9e8a558c52">More...</a><br /></td></tr>
-<tr class="separator:af8d17944c1304187950aad9e8a558c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ec69982d7c7098392c62c7c1fe16ec"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_h_t40.html#a58ec69982d7c7098392c62c7c1fe16ec">controlReg</a> = 0</td></tr>
+<tr class="memdesc:a58ec69982d7c7098392c62c7c1fe16ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control register.  <a href="class_s_h_t40.html#a58ec69982d7c7098392c62c7c1fe16ec">More...</a><br /></td></tr>
+<tr class="separator:a58ec69982d7c7098392c62c7c1fe16ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p ><a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> Class. </p>
+<div class="textblock"><p ><a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> sensor class. </p>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00116">116</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00121">121</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac0b628518b7080ed4960255091814956" name="ac0b628518b7080ed4960255091814956"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac0b628518b7080ed4960255091814956">&#9670;&#160;</a></span>SHT40()</h2>
@@ -199,7 +199,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> object constructor. </p>
+<p><a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> object constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">addr</td><td>Address of I2C slave device. </td></tr>
@@ -219,7 +219,7 @@ Here is the call graph for this function:</div>
 <map name="aclass_s_h_t40_ac0b628518b7080ed4960255091814956_cgraph" id="aclass_s_h_t40_ac0b628518b7080ed4960255091814956_cgraph">
 <area shape="rect" title="SHT40 object constructor." alt="" coords="5,31,116,56"/>
 <area shape="rect" href="class_s_h_t40.html#a88b01bafce3ff94d80db39b506174504" title="Clear measured data." alt="" coords="170,5,269,31"/>
-<area shape="rect" href="class_s_h_t40.html#a845a86373be69ec11e57bb4af74ff914" title="Sets temperature unit." alt="" coords="164,55,275,80"/>
+<area shape="rect" href="class_s_h_t40.html#acb84e6ece2b0e5f99b3d1fc176243f52" title="Set temperature unit." alt="" coords="164,55,275,80"/>
 </map>
 </div>
 
@@ -241,7 +241,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> object deconstructor. </p>
+<p><a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> object deconstructor. </p>
 <dl class="section return"><dt>Returns</dt><dd>No return value. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00059">59</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
@@ -263,9 +263,6 @@ Here is the call graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SHT40::clear </td>
@@ -275,17 +272,12 @@ Here is the call graph for this function:</div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Clear measured data. </p>
 <dl class="section return"><dt>Returns</dt><dd>No return value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00158">158</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00182">182</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -304,9 +296,6 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> SHT40::getUnit </td>
@@ -316,25 +305,20 @@ Here is the caller graph for this function:</div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get temperature unit. </p>
 <dl class="section return"><dt>Returns</dt><dd>Selected temperature unit. See <a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c" title="Temperature units.">SHT40_unit_t</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00170">170</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00176">176</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_s_h_t40_aabc3e928e94a31e8c8cb2a9757ae9452_icgraph.png" border="0" usemap="#aclass_s_h_t40_aabc3e928e94a31e8c8cb2a9757ae9452_icgraph" alt=""/></div>
 <map name="aclass_s_h_t40_aabc3e928e94a31e8c8cb2a9757ae9452_icgraph" id="aclass_s_h_t40_aabc3e928e94a31e8c8cb2a9757ae9452_icgraph">
 <area shape="rect" title="Get temperature unit." alt="" coords="192,5,303,31"/>
-<area shape="rect" href="class_s_h_t40.html#a54816665197165bfc23b2153bf4ca8a7" title="Calculates temperature from last measure call." alt="" coords="5,5,144,31"/>
+<area shape="rect" href="class_s_h_t40.html#a239b3c4d8391dc6b30953c66b4d299be" title="Calculate temperature using data from measure method." alt="" coords="5,5,144,31"/>
 </map>
 </div>
 
@@ -356,7 +340,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Initialize <a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> object. </p>
+<p>Initialize <a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> object. </p>
 <p >Check provided external I2C operations handlers and sets temperature unit</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -372,15 +356,15 @@ Here is the caller graph for this function:</div>
 <dd>
 <code>SHT40_OK</code> if everything is OK. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00140">140</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00151">151</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_s_h_t40_a7c44b45430aa66546d853ca517b1eb8f_cgraph.png" border="0" usemap="#aclass_s_h_t40_a7c44b45430aa66546d853ca517b1eb8f_cgraph" alt=""/></div>
 <map name="aclass_s_h_t40_a7c44b45430aa66546d853ca517b1eb8f_cgraph" id="aclass_s_h_t40_a7c44b45430aa66546d853ca517b1eb8f_cgraph">
 <area shape="rect" title="Initialize SHT40 object." alt="" coords="5,31,92,56"/>
-<area shape="rect" href="class_s_h_t40.html#a845a86373be69ec11e57bb4af74ff914" title="Sets temperature unit." alt="" coords="143,5,254,31"/>
-<area shape="rect" href="class_s_h_t40.html#a8d7de0ee5ac74c48ebdb7d0a558e9fad" title="Reads unique serial number." alt="" coords="140,55,257,80"/>
+<area shape="rect" href="class_s_h_t40.html#acb84e6ece2b0e5f99b3d1fc176243f52" title="Set temperature unit." alt="" coords="143,5,254,31"/>
+<area shape="rect" href="class_s_h_t40.html#a8d7de0ee5ac74c48ebdb7d0a558e9fad" title="Read unique serial number." alt="" coords="140,55,257,80"/>
 </map>
 </div>
 
@@ -402,25 +386,25 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Measures temerature and RH. </p>
+<p>Measure temerature and RH. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>Type of measurement. See <a class="el" href="group___s_h_t40.html#gad34c3eaa3b107949fa7c888815293ad2">SHT40_meas_t</a> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>SHT40_NOK</code> if NAK/NACK is received, <a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> is busy. </dd>
+<dl class="section return"><dt>Returns</dt><dd><code>SHT40_NOK</code> if NAK/NACK is received, <a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> is busy. </dd>
 <dd>
 <code>SHT40_OK</code> if measurement was OK. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00071">71</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00072">72</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_s_h_t40_ac5e9c9f2409dc9c1b73986126a433ef6_cgraph.png" border="0" usemap="#aclass_s_h_t40_ac5e9c9f2409dc9c1b73986126a433ef6_cgraph" alt=""/></div>
 <map name="aclass_s_h_t40_ac5e9c9f2409dc9c1b73986126a433ef6_cgraph" id="aclass_s_h_t40_ac5e9c9f2409dc9c1b73986126a433ef6_cgraph">
-<area shape="rect" title="Measures temerature and RH." alt="" coords="5,5,125,31"/>
-<area shape="rect" href="_s_h_t40_8cpp.html#a758dc50c962089fd445a7894899577fe" title="Get required delay for measurement type." alt="" coords="173,5,247,31"/>
+<area shape="rect" title="Measure temerature and RH." alt="" coords="5,5,125,31"/>
+<area shape="rect" href="_s_h_t40_8cpp.html#af33c7367153e332ea0a70ce60f433fbd" title="Get required delay for measurement type." alt="" coords="173,5,296,31"/>
 </map>
 </div>
 
@@ -442,10 +426,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Function to reset the chip. </p>
+<p>Reset the chip. </p>
 <dl class="section return"><dt>Returns</dt><dd>No return value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00132">132</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00143">143</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
 
 </div>
 </div>
@@ -465,10 +449,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates RH from last measure call. </p>
+<p>Calculate RH using data from <a class="el" href="class_s_h_t40.html#ac5e9c9f2409dc9c1b73986126a433ef6">measure</a> method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">out</td><td>Reference to output variable for relative humidity in %. </td></tr>
+    <tr><td class="paramname">out</td><td>Reference to output variable for relative humidity in %(0-100%). </td></tr>
   </table>
   </dd>
 </dl>
@@ -478,31 +462,23 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a845a86373be69ec11e57bb4af74ff914" name="a845a86373be69ec11e57bb4af74ff914"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a845a86373be69ec11e57bb4af74ff914">&#9670;&#160;</a></span>setUnit()</h2>
+<a id="acb84e6ece2b0e5f99b3d1fc176243f52" name="acb84e6ece2b0e5f99b3d1fc176243f52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb84e6ece2b0e5f99b3d1fc176243f52">&#9670;&#160;</a></span>setUnit()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SHT40::setUnit </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a>&#160;</td>
-          <td class="paramname"><em>u</em></td><td>)</td>
+          <td class="paramname"><em>unit</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Sets temperature unit. </p>
+<p>Set temperature unit. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">u</td><td>Desired temperature unit. See <a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> </td></tr>
@@ -512,13 +488,13 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>No return value.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c" title="Temperature units.">SHT40_unit_t</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00164">164</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00169">169</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_s_h_t40_a845a86373be69ec11e57bb4af74ff914_icgraph.png" border="0" usemap="#aclass_s_h_t40_a845a86373be69ec11e57bb4af74ff914_icgraph" alt=""/></div>
-<map name="aclass_s_h_t40_a845a86373be69ec11e57bb4af74ff914_icgraph" id="aclass_s_h_t40_a845a86373be69ec11e57bb4af74ff914_icgraph">
-<area shape="rect" title="Sets temperature unit." alt="" coords="164,31,275,56"/>
+<div class="center"><img src="class_s_h_t40_acb84e6ece2b0e5f99b3d1fc176243f52_icgraph.png" border="0" usemap="#aclass_s_h_t40_acb84e6ece2b0e5f99b3d1fc176243f52_icgraph" alt=""/></div>
+<map name="aclass_s_h_t40_acb84e6ece2b0e5f99b3d1fc176243f52_icgraph" id="aclass_s_h_t40_acb84e6ece2b0e5f99b3d1fc176243f52_icgraph">
+<area shape="rect" title="Set temperature unit." alt="" coords="164,31,275,56"/>
 <area shape="rect" href="class_s_h_t40.html#a7c44b45430aa66546d853ca517b1eb8f" title="Initialize SHT40 object." alt="" coords="17,5,104,31"/>
 <area shape="rect" href="class_s_h_t40.html#ac0b628518b7080ed4960255091814956" title="SHT40 object constructor." alt="" coords="5,55,116,80"/>
 </map>
@@ -526,8 +502,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a54816665197165bfc23b2153bf4ca8a7" name="a54816665197165bfc23b2153bf4ca8a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54816665197165bfc23b2153bf4ca8a7">&#9670;&#160;</a></span>temperature()</h2>
+<a id="a239b3c4d8391dc6b30953c66b4d299be" name="a239b3c4d8391dc6b30953c66b4d299be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a239b3c4d8391dc6b30953c66b4d299be">&#9670;&#160;</a></span>temperature()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -535,14 +511,14 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">uint8_t SHT40::temperature </td>
           <td>(</td>
-          <td class="paramtype">int16_t &amp;&#160;</td>
+          <td class="paramtype">int8_t &amp;&#160;</td>
           <td class="paramname"><em>out</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates temperature from last measure call. </p>
+<p>Calculate temperature using data from <a class="el" href="class_s_h_t40.html#ac5e9c9f2409dc9c1b73986126a433ef6">measure</a> method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">out</td><td>Reference to output variable for temperature. </td></tr>
@@ -553,13 +529,13 @@ Here is the caller graph for this function:</div>
 <dd>
 <code>SHT40_OK</code> if temperature is calculated. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00084">84</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00089">89</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_s_h_t40_a54816665197165bfc23b2153bf4ca8a7_cgraph.png" border="0" usemap="#aclass_s_h_t40_a54816665197165bfc23b2153bf4ca8a7_cgraph" alt=""/></div>
-<map name="aclass_s_h_t40_a54816665197165bfc23b2153bf4ca8a7_cgraph" id="aclass_s_h_t40_a54816665197165bfc23b2153bf4ca8a7_cgraph">
-<area shape="rect" title="Calculates temperature from last measure call." alt="" coords="5,5,144,31"/>
+<div class="center"><img src="class_s_h_t40_a239b3c4d8391dc6b30953c66b4d299be_cgraph.png" border="0" usemap="#aclass_s_h_t40_a239b3c4d8391dc6b30953c66b4d299be_cgraph" alt=""/></div>
+<map name="aclass_s_h_t40_a239b3c4d8391dc6b30953c66b4d299be_cgraph" id="aclass_s_h_t40_a239b3c4d8391dc6b30953c66b4d299be_cgraph">
+<area shape="rect" title="Calculate temperature using data from measure method." alt="" coords="5,5,144,31"/>
 <area shape="rect" href="class_s_h_t40.html#aabc3e928e94a31e8c8cb2a9757ae9452" title="Get temperature unit." alt="" coords="192,5,303,31"/>
 </map>
 </div>
@@ -582,16 +558,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Reads unique serial number. </p>
+<p>Read unique serial number. </p>
+<p >Values <code>0</code> and <code>0xFFFFFFFF</code> likely means sensor is not working properly.</p>
 <dl class="section return"><dt>Returns</dt><dd>Chip's unique serial number. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00115">115</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8cpp_source.html#l00126">126</a> of file <a class="el" href="_s_h_t40_8cpp_source.html">SHT40.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_s_h_t40_a8d7de0ee5ac74c48ebdb7d0a558e9fad_icgraph.png" border="0" usemap="#aclass_s_h_t40_a8d7de0ee5ac74c48ebdb7d0a558e9fad_icgraph" alt=""/></div>
 <map name="aclass_s_h_t40_a8d7de0ee5ac74c48ebdb7d0a558e9fad_icgraph" id="aclass_s_h_t40_a8d7de0ee5ac74c48ebdb7d0a558e9fad_icgraph">
-<area shape="rect" title="Reads unique serial number." alt="" coords="140,5,257,31"/>
+<area shape="rect" title="Read unique serial number." alt="" coords="140,5,257,31"/>
 <area shape="rect" href="class_s_h_t40.html#a7c44b45430aa66546d853ca517b1eb8f" title="Initialize SHT40 object." alt="" coords="5,5,92,31"/>
 </map>
 </div>
@@ -611,8 +588,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Union of <a class="el" href="class_s_h_t40.html" title="SHT40 Class.">SHT40</a> data. </p>
-<dl class="section note"><dt>Note</dt><dd>This union is aligned by one byte. </dd></dl>
+<p>Union of <a class="el" href="class_s_h_t40.html" title="SHT40 sensor class.">SHT40</a> data. </p>
 
 </div>
 </div>
@@ -638,7 +614,34 @@ Here is the caller graph for this function:</div>
 
 <p>I2C slave device address. </p>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00258">258</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00265">265</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+
+</div>
+</div>
+<a id="a58ec69982d7c7098392c62c7c1fe16ec" name="a58ec69982d7c7098392c62c7c1fe16ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ec69982d7c7098392c62c7c1fe16ec">&#9670;&#160;</a></span>controlReg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SHT40::controlReg = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Control register. </p>
+<p >Bit 0: Temperature unit. See <a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> Bit 1: Old temperature data. Bit 2: Old RH data. </p>
+
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00276">276</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 
 </div>
 </div>
@@ -654,7 +657,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00242">242</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00248">248</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 
 </div>
 </div>
@@ -670,7 +673,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00240">240</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00246">246</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 
 </div>
 </div>
@@ -688,7 +691,7 @@ Here is the caller graph for this function:</div>
 
 <p>Header for NACK/NAK is sensor is busy. </p>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00231">231</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00237">237</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 
 </div>
 </div>
@@ -714,7 +717,7 @@ Here is the caller graph for this function:</div>
 
 <p>Pointer to external I2C read function. </p>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00259">259</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00266">266</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 
 </div>
 </div>
@@ -740,7 +743,7 @@ Here is the caller graph for this function:</div>
 
 <p>Pointer to external I2C write function. </p>
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00260">260</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00267">267</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 
 </div>
 </div>
@@ -756,39 +759,39 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00253">253</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00259">259</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 
 </div>
 </div>
-<a id="ab3e58f2c66b6579370adee6158f02fdd" name="ab3e58f2c66b6579370adee6158f02fdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3e58f2c66b6579370adee6158f02fdd">&#9670;&#160;</a></span>sn1</h2>
+<a id="a5e4aa4c4f6b5bf922c2a1bd4cb452716" name="a5e4aa4c4f6b5bf922c2a1bd4cb452716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e4aa4c4f6b5bf922c2a1bd4cb452716">&#9670;&#160;</a></span>sn1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t SHT40::sn1[2]</td>
+          <td class="memname">uint16_t SHT40::sn1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00241">241</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00247">247</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 
 </div>
 </div>
-<a id="a10b9af96f826d5d1b2edc9928bdaf202" name="a10b9af96f826d5d1b2edc9928bdaf202"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10b9af96f826d5d1b2edc9928bdaf202">&#9670;&#160;</a></span>sn2</h2>
+<a id="a378bd92519ca1f1dbbcd68410b2082ab" name="a378bd92519ca1f1dbbcd68410b2082ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378bd92519ca1f1dbbcd68410b2082ab">&#9670;&#160;</a></span>sn2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t SHT40::sn2[2]</td>
+          <td class="memname">uint16_t SHT40::sn2</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00239">239</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00245">245</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 
 </div>
 </div>
@@ -804,33 +807,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00251">251</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
-
-</div>
-</div>
-<a id="af8d17944c1304187950aad9e8a558c52" name="af8d17944c1304187950aad9e8a558c52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8d17944c1304187950aad9e8a558c52">&#9670;&#160;</a></span>unit</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group___s_h_t40.html#ga471b19e253a7d6ef9d8b7f58719fd99c">SHT40_unit_t</a> SHT40::unit = <a class="el" href="group___s_h_t40.html#gga471b19e253a7d6ef9d8b7f58719fd99ca42002bfdc377e7ba21bc738149b1834b">SHT40_UNIT_C</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Temperature unit variable. </p>
-
-<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00261">261</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_h_t40_8h_source.html#l00257">257</a> of file <a class="el" href="_s_h_t40_8h_source.html">SHT40.h</a>.</p>
 
 </div>
 </div>
@@ -844,7 +821,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_s_h_t40.html">SHT40</a></li>
-    <li class="footer">Generated on Wed Dec 28 2022 21:17:52 for SHT40 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Wed Feb 8 2023 19:28:41 for SHT40 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
