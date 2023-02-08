@@ -13,7 +13,7 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-arm",
-            "compilerPath": "${ARM-GCC}\\arm-none-eabi-g++.exe"
+            "compilerPath": "${ARM-GCC}\\arm-none-eabi-gcc.exe"
         }
     ],
     "version": 4

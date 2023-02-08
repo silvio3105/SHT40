@@ -1,0 +1,4 @@
+<map id="getMeasureDelay" name="getMeasureDelay">
+<area shape="rect" id="node1" title="Get required delay for measurement type." alt="" coords="173,5,296,31"/>
+<area shape="rect" id="node2" href="$class_s_h_t40.html#ac5e9c9f2409dc9c1b73986126a433ef6" title="Measure temerature and RH." alt="" coords="5,5,125,31"/>
+</map>

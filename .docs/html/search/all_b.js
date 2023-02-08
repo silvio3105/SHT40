@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['whoami_0',['whoAmI',['../class_s_h_t40.html#a8d7de0ee5ac74c48ebdb7d0a558e9fad',1,'SHT40']]]
+  ['_7esht40_0',['~SHT40',['../class_s_h_t40.html#ae74f4b03548e0906ef04903b584da1d0',1,'SHT40']]]
 ];
