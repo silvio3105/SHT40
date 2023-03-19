@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">SHT40<span id="projectnumber">&#160;v1.0r2</span>
+   <div id="projectname">SHT40<span id="projectnumber">&#160;v1.0r3</span>
    </div>
    <div id="projectbrief">Frameworkless I2C driver for SHT40 sensor written in C++.</div>
   </td>
@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('_s_h_t40_8cpp_source.html',''); initRe
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    uint8_t ret = <a class="code hl_define" href="group___s_h_t40.html#gab911ec92009dcb97318f6981a420bfb9">SHT40_OK</a>;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">// If temperature data is zero or old</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">if</span> (!mData.temp) <span class="keywordflow">return</span> <a class="code hl_define" href="group___s_h_t40.html#ga6a12dcc59118c49840e8d34934c5b27b">SHT40_NOK</a>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">if</span> (!mData.temp[0] &amp;&amp; !mData.temp[1]) <span class="keywordflow">return</span> <a class="code hl_define" href="group___s_h_t40.html#ga6a12dcc59118c49840e8d34934c5b27b">SHT40_NOK</a>;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_s_h_t40.html#a58ec69982d7c7098392c62c7c1fe16ec">controlReg</a> &amp; SHT40_OLD_TEMP) ret = <a class="code hl_define" href="group___s_h_t40.html#gaa2f41fa09c651bc153f8aceaf486be44">SHT40_OLD_DATA</a>;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="comment">// Calculate temperature from SHT40 data in desired temperature unit</span></div>
@@ -190,7 +190,7 @@ $(document).ready(function(){initNavTree('_s_h_t40_8cpp_source.html',''); initRe
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    uint8_t ret = <a class="code hl_define" href="group___s_h_t40.html#gab911ec92009dcb97318f6981a420bfb9">SHT40_OK</a>;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// If RH data is zero or old</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">if</span> (!mData.rh) <span class="keywordflow">return</span> <a class="code hl_define" href="group___s_h_t40.html#ga6a12dcc59118c49840e8d34934c5b27b">SHT40_NOK</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">if</span> (!mData.rh[0] &amp;&amp; !mData.rh[1]) <span class="keywordflow">return</span> <a class="code hl_define" href="group___s_h_t40.html#ga6a12dcc59118c49840e8d34934c5b27b">SHT40_NOK</a>;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_s_h_t40.html#a58ec69982d7c7098392c62c7c1fe16ec">controlReg</a> &amp; SHT40_OLD_RH) ret = <a class="code hl_define" href="group___s_h_t40.html#gaa2f41fa09c651bc153f8aceaf486be44">SHT40_OLD_DATA</a>;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="comment">// Calculate RH from SHT40 data</span></div>
@@ -339,7 +339,7 @@ $(document).ready(function(){initNavTree('_s_h_t40_8cpp_source.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="_s_h_t40_8cpp.html">SHT40.cpp</a></li>
-    <li class="footer">Generated on Wed Feb 8 2023 19:28:41 for SHT40 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Sun Mar 19 2023 22:06:17 for SHT40 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
