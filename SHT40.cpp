@@ -91,7 +91,7 @@ uint8_t SHT40::temperature(int8_t& out)
 	uint8_t ret = SHT40_OK;
 
 	// If temperature data is zero or old
-	if (!mData.temp) return SHT40_NOK;
+	if (!mData.temp[0] && !mData.temp[1]) return SHT40_NOK;
 	if (controlReg & SHT40_OLD_TEMP) ret = SHT40_OLD_DATA;
 
 	// Calculate temperature from SHT40 data in desired temperature unit
@@ -108,7 +108,7 @@ uint8_t SHT40::rh(uint8_t& out)
 	uint8_t ret = SHT40_OK;
 
 	// If RH data is zero or old
-	if (!mData.rh) return SHT40_NOK;
+	if (!mData.rh[0] && !mData.rh[1]) return SHT40_NOK;
 	if (controlReg & SHT40_OLD_RH) ret = SHT40_OLD_DATA;
 
 	// Calculate RH from SHT40 data
